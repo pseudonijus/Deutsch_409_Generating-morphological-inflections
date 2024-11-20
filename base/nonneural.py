@@ -53,6 +53,7 @@ def halign(s,t):
 
 def levenshtein(s, t, inscost = 1.0, delcost = 1.0, substcost = 1.0):
     """Recursive implementation of Levenshtein, with alignments returned."""
+    '''calculates the min number of edits (insert, delete, substitute) to transform s to t'''
     @memolrec
     def lrec(spast, tpast, srem, trem, cost):
         if len(srem) == 0:
