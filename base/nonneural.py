@@ -72,6 +72,7 @@ def levenshtein(s, t, inscost = 1.0, delcost = 1.0, substcost = 1.0):
 
     answer = lrec('', '', s, t, 0)
     return answer[0],answer[1],answer[4]
+    '''calculates the minimum number of changes needed to change s to t'''
 
 
 def memolrec(func):
