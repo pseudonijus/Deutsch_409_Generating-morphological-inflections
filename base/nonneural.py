@@ -43,6 +43,7 @@ def halign(s,t):
             bl = lower
             minscore = score
     '''padding s with underscores to align with t'''
+'''ex: play___ and ___played -> the suffix changes more explicitly'''
 
     zipped = list(zip(bu,bl))
     newin  = ''.join(i for i,o in zipped if i != '_' or o != '_')
