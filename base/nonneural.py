@@ -85,6 +85,8 @@ def memolrec(func):
             cache[(sr,tr)] = (res[0][len(sp):], res[1][len(tp):], res[4] - cost)
         return sp + cache[(sr,tr)][0], tp + cache[(sr,tr)][1], '', '', cost + cache[(sr,tr)][2]
     return wrap
+    '''cache to check if distance between s and t has already been calculated before to save
+    time'''
 
 
 def alignprs(lemma, form):
