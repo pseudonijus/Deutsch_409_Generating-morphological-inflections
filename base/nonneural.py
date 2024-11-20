@@ -15,7 +15,9 @@ from glob import glob
 
 def hamming(s,t):
     return sum(1 for x,y in zip(s,t) if x != y)
-
+'''calculating the hamming distance between two given strings
+hamming distance: the number of places that two strings differ
+(if distance is zero, the strings are the same)'''
 
 def halign(s,t):
     """Align two strings by Hamming distance."""
@@ -30,6 +32,7 @@ def halign(s,t):
             bu = upper
             bl = lower
             minscore = score
+    '''padding t with underscores to align with s'''
 
     for lpad in range(0, len(s)+1):
         upper = len(t) * '_' + s
@@ -39,6 +42,7 @@ def halign(s,t):
             bu = upper
             bl = lower
             minscore = score
+    '''padding s with underscores to align with t'''
 
     zipped = list(zip(bu,bl))
     newin  = ''.join(i for i,o in zipped if i != '_' or o != '_')
