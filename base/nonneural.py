@@ -64,6 +64,7 @@ def levenshtein(s, t, inscost = 1.0, delcost = 1.0, substcost = 1.0):
     calculating the minimum number of edits (insert, delete, substitute) to transform s to t."""
     @memolrec
     def lrec(spast, tpast, srem, trem, cost):
+        """spast
         if len(srem) == 0:
             return spast + len(trem) * '_', tpast + trem, '', '', cost + len(trem)
         if len(trem) == 0:
@@ -84,7 +85,8 @@ def levenshtein(s, t, inscost = 1.0, delcost = 1.0, substcost = 1.0):
 
 
 def memolrec(func):
-    """Memoizer for Levenshtein."""
+    """Memoizer for Levenshtein (cache to check if distance between s and t has already been calculated
+    before to save time."""
     cache = {}
     @wraps(func)
     def wrap(sp, tp, sr, tr, cost):
@@ -93,8 +95,6 @@ def memolrec(func):
             cache[(sr,tr)] = (res[0][len(sp):], res[1][len(tp):], res[4] - cost)
         return sp + cache[(sr,tr)][0], tp + cache[(sr,tr)][1], '', '', cost + cache[(sr,tr)][2]
     return wrap
-    '''cache to check if distance between s and t has already been calculated before to save
-    time'''
 
 
 def alignprs(lemma, form):
