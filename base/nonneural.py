@@ -33,18 +33,19 @@ def halign(s,t):
     minscore = len(s) + len(t) + 1
     #minscore keeps track of the current minimum Hamming distance
     #initialized as the sum of the string lengths plus one
-    for upad in range(0, len(t)+1):
-        
+    for upad in range(0, len(t)+1): #padding s to align with t
         upper = '_' * upad + s + (len(t) - upad) * '_'
+        #pads s with 'upad' underscores on the left  and 'len(t)-upad) underscores on the right
         lower = len(s) * '_' + t
+        #pads t with len(s) underscores to match the length of upper
         score = hamming(upper, lower)
-        if score < minscore:
-            bu = upper
-            bl = lower
-            minscore = score
-    '''padding t with underscores to align with s'''
+        #calculates the Hamming distance with current padding
+        if score < minscore: #if Hamming distance is less than current minscore
+            bu = upper #stores padded version of s for current minimum
+            bl = lower #stores padded version of t for current minimum
+            minscore = score #updates with current minimum Hamming distance
 
-    for lpad in range(0, len(s)+1):
+    for lpad in range(0, len(s)+1): #same as above but for string t
         upper = len(t) * '_' + s
         lower = (len(s) - lpad) * '_' + t + '_' * lpad
         score = hamming(upper, lower)
@@ -52,18 +53,15 @@ def halign(s,t):
             bu = upper
             bl = lower
             minscore = score
-    '''padding s with underscores to align with t'''
-'''ex: play___ and ___played -> the suffix changes more explicitly'''
-
-    zipped = list(zip(bu,bl))
-    newin  = ''.join(i for i,o in zipped if i != '_' or o != '_')
-    newout = ''.join(o for i,o in zipped if i != '_' or o != '_')
+    zipped = list(zip(bu,bl)) #zips padded versions of s and t for minimum Hamming distance
+    newin  = ''.join(i for i,o in zipped if i != '_' or o != '_') #stores the version of s without the underscores
+    newout = ''.join(o for i,o in zipped if i != '_' or o != '_') #stores the version of t without the underscores
     return newin, newout
 
 
 def levenshtein(s, t, inscost = 1.0, delcost = 1.0, substcost = 1.0):
-    """Recursive implementation of Levenshtein, with alignments returned."""
-    '''calculates the min number of edits (insert, delete, substitute) to transform s to t'''
+    """Recursive implementation of Levenshtein, with alignments returned by
+    calculating the minimum number of edits (insert, delete, substitute) to transform s to t."""
     @memolrec
     def lrec(spast, tpast, srem, trem, cost):
         if len(srem) == 0:
