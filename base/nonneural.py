@@ -9,22 +9,32 @@ Last Update: 22/03/2021
 """
 
 import sys, os, getopt, re
+#sys, os: system level operations (file paths, arguments)
+#getopt: parsing command-line options
+#re: regular expressions
 from functools import wraps
+#preserves wrapped functions
 from glob import glob
+#globbing (method for finding files with similar naming schema)
 
 
 def hamming(s,t):
+    """Calculate the Hamming distance between two given strings, s, and t:
+    (ie: how many substitutions needed to turn one string into another).""""
     return sum(1 for x,y in zip(s,t) if x != y)
-'''calculating the hamming distance between two given strings
-hamming distance: the number of places that two strings differ
-(if distance is zero, the strings are the same)'''
+    #iterates through each character in the zipped pair; for x,y in zip(s,t)
+    #if x and y are not equal; if x!=y, it adds 1 to the total pair; sum()
 
 def halign(s,t):
-    """Align two strings by Hamming distance."""
-    slen = len(s)
-    tlen = len(t)
+    """Align two strings by Hamming distance by padding them with
+    underscores so that their Hamming distance can be minimized."""
+    slen = len(s) #stores the length of string s
+    tlen = len(t) #stores the length of string t
     minscore = len(s) + len(t) + 1
+    #minscore keeps track of the current minimum Hamming distance
+    #initialized as the sum of the string lengths plus one
     for upad in range(0, len(t)+1):
+        
         upper = '_' * upad + s + (len(t) - upad) * '_'
         lower = len(s) * '_' + t
         score = hamming(upper, lower)
