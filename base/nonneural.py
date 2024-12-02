@@ -20,7 +20,7 @@ from glob import glob
 
 def hamming(s,t):
     """Calculate the Hamming distance between two given strings, s, and t:
-    (ie: how many substitutions needed to turn one string into another).""""
+    (ie: how many substitutions needed to turn one string into another)."""
     return sum(1 for x,y in zip(s,t) if x != y)
     #iterates through each character in the zipped pair; for x,y in zip(s,t)
     #if x and y are not equal; if x!=y, it adds 1 to the total pair; sum()
