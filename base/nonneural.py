@@ -93,7 +93,7 @@ def levenshtein(s, t, inscost = 1.0, delcost = 1.0, substcost = 1.0):
                     #adds first character of srem to spast, removes from srem
                     #adds underscore to tpast to represent an deletion
                    key = lambda x: x[4])
-                    #finds the minimum cost
+                    #finds the minimum cost using minimum number of substitutions, insertions, deletions
 
     answer = lrec('', '', s, t, 0)
     #spast and tpast are initialized as empty strings as no characters have been processed yet
@@ -123,19 +123,25 @@ def alignprs(lemma, form):
     1/4 and 3/6 may be empty.
     """
 
-    al = levenshtein(lemma, form, substcost = 1.1) # Force preference of 0:x or x:0 by 1.1 cost
+    al = levenshtein(lemma, form, substcost = 1.1) #force preference of 0:x or x:0 by 1.1 cost
+    #aligns lemma and form using Levenshtein function
     alemma, aform = al[0], al[1]
-    # leading spaces
+    #aligned lemma and aligned form
     lspace = max(len(alemma) - len(alemma.lstrip('_')), len(aform) - len(aform.lstrip('_')))
-    # trailing spaces
+    #leading spaces: calculates the difference in length before and after padding with underscores for lemma and form
+    #max determines larger number of leading spaces
     tspace = max(len(alemma[::-1]) - len(alemma[::-1].lstrip('_')), len(aform[::-1]) - len(aform[::-1].lstrip('_')))
+    #trailing spaces
+    #leading spaces: calculates the difference in length before and after padding with underscores for lemma and form
+    #max determines larger number of trailing spaces
     return alemma[0:lspace], alemma[lspace:len(alemma)-tspace], alemma[len(alemma)-tspace:], aform[0:lspace], aform[lspace:len(alemma)-tspace], aform[len(alemma)-tspace:]
+    #returns prefix of alemma, stem of alemma, suffix of alemma, prefix of aform, stem of aform, suffix of aform
 
 
 def prefix_suffix_rules_get(lemma, form):
     """Extract a number of suffix-change and prefix-change rules
     based on a given example lemma+inflected form."""
-    lp,lr,ls,fp,fr,fs = alignprs(lemma, form) # Get six parts, three for in three for out
+    lp,lr,ls,fp,fr,fs = alignprs(lemma, form) #get six parts, three for in three for out
 
     # Suffix rules
     ins  = lr + ls + ">"
