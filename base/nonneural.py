@@ -141,26 +141,43 @@ def alignprs(lemma, form):
 def prefix_suffix_rules_get(lemma, form):
     """Extract a number of suffix-change and prefix-change rules
     based on a given example lemma+inflected form."""
+    """Analyze how the prefix and suffix change given a lemma and inflected form in order
+    to predict forms for other words.""" 
     lp,lr,ls,fp,fr,fs = alignprs(lemma, form) #get six parts, three for in three for out
+    #lp, lr, ls: lemma prefix, lemma root, lemma suffix
+    #fp, fr, fs: form prefix, form root, form suffix
 
     # Suffix rules
     ins  = lr + ls + ">"
+    #stem and suffix of lemma, '>' indicates end
     outs = fr + fs + ">"
+    #stem and suffix of form, '>' indicates end
     srules = set()
+    #initializes empty set for suffix rules
     for i in range(min(len(ins), len(outs))):
+        #iterates through either the stem+suffix of lemma or stem+suffix of form, whichever is shorter
         srules.add((ins[i:], outs[i:]))
+        #adds ins and outs sliced from index i to end into set of suffix rules
     srules = {(x[0].replace('_',''), x[1].replace('_','')) for x in srules}
+    #removes underscores from suffix rules by replacing with empty strings
 
     # Prefix rules
     prules = set()
     if len(lp) >= 0 or len(fp) >= 0:
+        #if either the lemma or form has a prefix
         inp = "<" + lp
+        #lemma prefix, '<' indicates' beginning
         outp = "<" + fp
+        #form prefix, '<' indicates' beginning
         for i in range(0,len(fr)):
+            #iterates through length of form root
             prules.add((inp + fr[:i],outp + fr[:i]))
-            prules = {(x[0].replace('_',''), x[1].replace('_','')) for x in prules}
+            #inp and outp, plus the form root sliced from the beginning to index i
+    prules = {(x[0].replace('_',''), x[1].replace('_','')) for x in prules}
+    #removes underscores from prefix rules by replacing with empty strings
 
     return prules, srules
+    #returns set of prefix and suffix rules, respectively
 
 
 def apply_best_rule(lemma, msd, allprules, allsrules):
