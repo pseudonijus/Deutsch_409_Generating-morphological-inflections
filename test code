@@ -1,0 +1,330 @@
+#!/usr/bin/env python3
+"""
+Non-neural baseline system for the SIGMORPHON 2020 Shared Task 0.
+Author: Mans Hulden
+Modified by: Tiago Pimentel
+Modified by: Jordan Kodner
+Modified by: Omer Goldman
+Last Update: 22/03/2021
+"""
+
+import sys, os, getopt, re
+from functools import wraps
+from glob import glob
+
+
+def hamming(s,t):
+    return sum(1 for x,y in zip(s,t) if x != y)
+
+
+def halign(s,t):
+    """Align two strings by Hamming distance."""
+    slen = len(s)
+    tlen = len(t)
+    minscore = len(s) + len(t) + 1
+    for upad in range(0, len(t)+1):
+        upper = '_' * upad + s + (len(t) - upad) * '_'
+        lower = len(s) * '_' + t
+        score = hamming(upper, lower)
+        if score < minscore:
+            bu = upper
+            bl = lower
+            minscore = score
+
+    for lpad in range(0, len(s)+1):
+        upper = len(t) * '_' + s
+        lower = (len(s) - lpad) * '_' + t + '_' * lpad
+        score = hamming(upper, lower)
+        if score < minscore:
+            bu = upper
+            bl = lower
+            minscore = score
+
+    zipped = list(zip(bu,bl))
+    newin  = ''.join(i for i,o in zipped if i != '_' or o != '_')
+    newout = ''.join(o for i,o in zipped if i != '_' or o != '_')
+    return newin, newout
+
+#print(halign("aufgeben", "gebt auf"))
+
+def memolrec(func):
+    """Memoizer for Levenshtein."""
+    cache = {}
+    @wraps(func)
+    def wrap(sp, tp, sr, tr, cost):
+        if (sr,tr) not in cache:
+            res = func(sp, tp, sr, tr, cost)
+            cache[(sr,tr)] = (res[0][len(sp):], res[1][len(tp):], res[4] - cost)
+        return sp + cache[(sr,tr)][0], tp + cache[(sr,tr)][1], '', '', cost + cache[(sr,tr)][2]
+    return wrap
+
+def levenshtein(s, t, inscost = 1.0, delcost = 1.0, substcost = 1.0): # insertion, deletion, substitution
+    """Recursive implementation of Levenshtein, with alignments returned."""
+    @memolrec # remembers answers to problems it alr solved !!
+    def lrec(spast, tpast, srem, trem, cost): 
+        # spast & tpast have been aligned alr; initialized to ""
+        # srem & trem need to be aligned still
+        # cost -> total cost of the operations so far; initialized to 0
+        if len(srem) == 0:
+            return spast + len(trem) * '_', tpast + trem, '', '', cost + len(trem)
+            # if s = "", t= "cat", then "___", "cat" is returned with cost = 3.0
+        if len(trem) == 0:
+            return spast + srem, tpast + len(srem) * '_', '', '', cost + len(srem)
+            # "cat", "___", cost = 3.0
+        addcost = 0
+        if srem[0] != trem[0]:
+            addcost = substcost # if first character is diff, it substitutes
+
+        return min((lrec(spast + srem[0], tpast + trem[0], srem[1:], trem[1:], cost + addcost),
+                   lrec(spast + '_', tpast + trem[0], srem, trem[1:], cost + inscost),
+                   lrec(spast + srem[0], tpast + '_', srem[1:], trem, cost + delcost)),
+                   key = lambda x: x[4])
+
+    answer = lrec('', '', s, t, 0)
+    return answer[0],answer[1],answer[4]
+
+
+# make a memorizer for smth
+
+def alignprs(lemma, form): #tweak: handling separable-prefix verbs bc this is where it determines what is a prefix/suffix
+    """Break lemma/form into three parts:
+    IN:  1 | 2 | 3
+    OUT: 4 | 5 | 6
+    1/4 are assumed to be prefixes, 2/5 the stem, and 3/6 a suffix.
+    1/4 and 3/6 may be empty.
+    """
+
+    al = levenshtein(lemma, form, substcost = 1.1) # Force preference of 0:x or x:0 by 1.1 cost
+    alemma, aform = al[0], al[1]
+    # leading spaces
+    lspace = max(len(alemma) - len(alemma.lstrip('_')), len(aform) - len(aform.lstrip('_')))
+    # trailing spaces
+    tspace = max(len(alemma[::-1]) - len(alemma[::-1].lstrip('_')), len(aform[::-1]) - len(aform[::-1].lstrip('_')))
+    
+    #cleaning up code 1
+    lp = alemma[0:lspace]
+    lr = alemma[lspace:len(alemma)-tspace] 
+    ls = alemma[len(alemma)-tspace:]
+    fp = aform[0:lspace]
+    fr = aform[lspace:len(alemma)-tspace]
+    fs = aform[len(alemma)-tspace:]
+        
+    return lp, lr, ls, fp, fr, fs
+
+#print(alignprs("aufgeben","gebt auf"))
+
+VALID_PREFIXES = ["auf", "ab", "aus", "ein", "mit", "nach", "um", "unter", "über", "vor", "zu"]
+
+def is_valid_prefix_alignment(lemma, form): #diallows for prefixes to be broken up
+    for prefix in VALID_PREFIXES:
+        if prefix in lemma and prefix not in form:
+            return False  # Invalid if prefix is missing
+    return True
+
+def alignment_gap_penalty(upper, lower): #counts gaps that dont line up
+    return abs(upper.count('_') - lower.count('_'))
+
+def halign_with_gap_penalty(s, t): #aligns considering the gap
+    best_alignment = None # initializes to None
+    min_score = float('inf') # initializes to + infinity so that any min score can be updated
+    for alignment in generate_alignments(s, t):  # Assume this generates all possible alignments
+        score = hamming(*alignment) + alignment_gap_penalty(*alignment) 
+        if score < min_score:
+            best_alignment = alignment
+            min_score = score
+    return best_alignment
+
+def halign_with_prefix(s, t): 
+    for prefix in VALID_PREFIXES:
+        if s.startswith(prefix):
+            aligned = prefix + halign(s[len(prefix):], t)
+            return aligned
+    return halign(s, t)
+
+
+
+def prefix_suffix_rules_get(lemma, form): # aufgeben, gebt auf
+    """Extract a number of suffix-change and prefix-change rules
+    based on a given example lemma+inflected form."""
+    lp,lr,ls,fp,fr,fs = alignprs(lemma, form) # Get six parts, three for lemma three for form
+    #print(lp,lr,ls,fp,fr,fs)
+    # auf, geb, en    "  ", gebt, auf   * it shouldn't be gebt auf " " bc gebt has to stay the root
+
+    # Suffix rules
+    ins  = lr + ls + ">" #lemma suffix = lemma core + lemma suffix + >  
+    outs = fr + fs + ">" #form suffix = form core + form suffix + >      
+    srules = set() #creates the set that will contain the rules????
+    for i in range(min(len(ins), len(outs))): #looping thru the range of either length of lemma or form depending which is the min number
+        srules.add((ins[i:], outs[i:])) #add the suffixes to the set
+    srules = {(x[0].replace('_',''), x[1].replace('_','')) for x in srules} #replace the padding with just empty strings
+
+    # Prefix rules
+    prules = set()
+    if len(lp) >= 0 or len(fp) >= 0: #just checking that the length of prefixes are greater than 0
+        inp = "<" + lp #lemma prefix = < + lemma prefix       -> inp = '<auf'
+        outp = "<" + fp # form prefix = < + form prefix      --> outp = '< gebt'
+        for i in range(0,len(fr)):
+            prules.add((inp + fr[:i], outp + fr[:i])) #(auf + g, g) and then so on, increasing letter 
+            prules = {(x[0].replace('_',''), x[1].replace('_','')) for x in prules}
+
+    return prules, srules
+
+
+
+
+#print(prefix_suffix_rules_get("aufgeben", "gebt auf"))
+
+
+
+def apply_best_rule(lemma, msd, allprules, allsrules): #"aufgeben", "PST", "all the rules from previous method"
+    """Applies the longest-matching suffix-changing rule given an input
+    form and the MSD. Length ties in suffix rules are broken by frequency.
+    For prefix-changing rules, only the most frequent rule is chosen."""
+
+    bestrulelen = 0 #counts frequency
+    base = "<" + lemma + ">" # the >< are so that transformations can operate on a marked string ?
+    if msd not in allprules and msd not in allsrules:
+        return lemma # Haven't seen this inflection, so bail out
+
+    if msd in allsrules:
+        applicablerules = [(x[0],x[1],y) for x,y in allsrules[msd].items() if x[0] in base and is_valid_prefix_alignment(x[0],x[1])]
+        #print(f'These are the applicable rules: {applicablerules}')
+        if applicablerules:
+            #len(x[0]) prefers longest input match, x[2] prefers higher frequency, len(x[1]) prefers longer output transformation
+            bestrule = max(applicablerules, key = lambda x: (len(x[0]), -len(x[1]), x[2])) # is this frequency heuristic good for my dataset -> changed to penalize long/unexpected transformations
+            base = base.replace(bestrule[0], bestrule[1])
+            #print(f'This is the bestrule: {bestrule}')
+           # print(f'This is the replaced base: {base}')
+
+    if msd in allprules:
+        applicablerules = [(x[0],x[1],y) for x,y in allprules[msd].items() if x[0] in base]
+        #print(f'These are the applicable rules: {applicablerules}')
+        if applicablerules:
+            bestrule = max(applicablerules, key = lambda x: (x[2])) # x[2]chooses highest frequency
+            base = base.replace(bestrule[0], bestrule[1])
+            #print(f'This is the bestrule: {bestrule}')
+            #print(f'This is the replaced base: {base}')
+
+
+    base = base.replace('<', '')
+    #print(f'This is the cleaned base: {base}')
+    base = base.replace('>', '')
+    #print(f'This is the cleaned base 2: {base}')
+    return base
+
+#print(apply_best_rule("aufgeben", "PST", prefix_suffix_rules_get("aufgeben", "gebt auf"),prefix_suffix_rules_get("aufgeben", "gebt auf")))
+
+
+def numleadingsyms(s, symbol):
+    return len(s) - len(s.lstrip(symbol))
+
+
+def numtrailingsyms(s, symbol):
+    return len(s) - len(s.rstrip(symbol))
+
+###############################################################################
+
+
+def main(argv):
+    options, remainder = getopt.gnu_getopt(argv[1:], 'ohp:', ['output','help','path='])
+    TEST, OUTPUT, HELP, path = False,False, False, '/Users/isujin/deutsch/data/'
+    for opt, arg in options:
+        if opt in ('-o', '--output'):
+            OUTPUT = True
+        if opt in ('-t', '--test'):
+            TEST = True
+        if opt in ('-h', '--help'):
+            HELP = True
+        if opt in ('-p', '--path'):
+            path = arg
+
+    if HELP:
+            print("\n*** Baseline for the SIGMORPHON 2020 shared task ***\n")
+            print("By default, the program runs all languages only evaluating accuracy.")
+            print("To create output files, use -o")
+            print("The training and dev-data are assumed to live in ./part1/development_languages/")
+            print("Options:")
+            print(" -o         create output files with guesses (and don't just evaluate)")
+            print(" -t         evaluate on test instead of dev")
+            print(" -p [path]  data files path. Default is ../data/")
+            quit()
+
+    totalavg, numlang = 0.0, 0
+    for lang in [os.path.splitext(d)[0] for d in os.listdir(path) if '.trn' in d]:
+        # initializes allprules and allsrules here
+        allprules, allsrules = {}, {}
+        if not os.path.isfile(path + lang + ".trn"):
+            continue
+        lines = [line.strip() for line in open(path + lang + ".trn", "r", encoding='utf8') if line != '\n']
+
+        # First, test if language is predominantly suffixing or prefixing
+        # If prefixing, work with reversed strings
+        prefbias, suffbias = 0,0
+
+        #organizes rules by their msd here!!
+        for l in lines:
+            lemma, _,  form = l.split(u'\t')
+            aligned = halign(lemma, form)
+            if ' ' not in aligned[0] and ' ' not in aligned[1] and '-' not in aligned[0] and '-' not in aligned[1]:
+                prefbias += numleadingsyms(aligned[0],'_') + numleadingsyms(aligned[1],'_')
+                suffbias += numtrailingsyms(aligned[0],'_') + numtrailingsyms(aligned[1],'_')
+        for l in lines: # Read in lines and extract transformation rules from pairs
+            lemma, msd, form = l.split(u'\t')
+            if prefbias > suffbias:
+                lemma = lemma[::-1]
+                form = form[::-1]
+            prules, srules = prefix_suffix_rules_get(lemma, form)
+
+            if msd not in allprules and len(prules) > 0:
+                allprules[msd] = {}
+            if msd not in allsrules and len(srules) > 0:
+                allsrules[msd] = {}
+
+            for r in prules: #adds prefix rules to allprules[msd] -> based on msd
+                if (r[0],r[1]) in allprules[msd]:
+                    allprules[msd][(r[0],r[1])] = allprules[msd][(r[0],r[1])] + 1
+                else:
+                    allprules[msd][(r[0],r[1])] = 1
+
+            for r in srules:
+                if (r[0],r[1]) in allsrules[msd]:
+                    allsrules[msd][(r[0],r[1])] = allsrules[msd][(r[0],r[1])] + 1
+                else:
+                    allsrules[msd][(r[0],r[1])] = 1
+
+        # Run eval on dev
+        devlines = [line.strip() for line in open(path + lang + ".dev", "r", encoding='utf8') if line != '\n']
+        if TEST:
+            devlines = [line.strip() for line in open(path + lang + ".tst", "r", encoding='utf8') if line != '\n']
+        numcorrect = 0
+        numguesses = 0
+        if OUTPUT:
+            outfile = open(path + lang + ".out", "w", encoding='utf8')
+        for l in devlines:
+            lemma, msd, correct = l.split(u'\t')
+#                    lemma, msd, = l.split(u'\t')
+            if prefbias > suffbias:
+                lemma = lemma[::-1]
+            outform = apply_best_rule(lemma, msd, allprules, allsrules)
+            if prefbias > suffbias:
+                outform = outform[::-1]
+                lemma = lemma[::-1]
+            if outform == correct:
+                numcorrect += 1
+            numguesses += 1
+            if OUTPUT:
+                outfile.write(lemma + "\t" + msd + "\t" + outform + "\n")
+
+        if OUTPUT:
+            outfile.close()
+
+        numlang += 1
+        totalavg += numcorrect/float(numguesses)
+
+        print(lang + ": " + str(str(numcorrect/float(numguesses)))[0:7])
+
+    print("Average accuracy", totalavg/float(numlang))
+
+
+if __name__ == "__main__":
+    main(sys.argv)
