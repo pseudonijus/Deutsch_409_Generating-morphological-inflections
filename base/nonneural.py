@@ -62,31 +62,49 @@ def halign(s,t):
 def levenshtein(s, t, inscost = 1.0, delcost = 1.0, substcost = 1.0):
     """Recursive implementation of Levenshtein, with alignments returned by
     calculating the minimum number of edits (insert, delete, substitute) to transform s to t."""
+    #s and t: input strings to compare
+    #inscost, delcost, substcost: costs of insertion, deletion, and substitution, respectively (default: 1.0)
     @memolrec
+    #memoizer for lrec function (as seen below)
     def lrec(spast, tpast, srem, trem, cost):
-        """spast
         if len(srem) == 0:
+            #base case of recursive algorithm: if there are no more remaining characters in s
             return spast + len(trem) * '_', tpast + trem, '', '', cost + len(trem)
         if len(trem) == 0:
             return spast + srem, tpast + len(srem) * '_', '', '', cost + len(srem)
+            #base case of recursive algorithm: if there are no more remaining characters in t
 
         addcost = 0
+        #total cost of insertions/deletions/substitutions, initialized at 0
         if srem[0] != trem[0]:
             addcost = substcost
+            #checks if first characters of s and t are not equal, if so, add cost of substition to total cost
 
         return min((lrec(spast + srem[0], tpast + trem[0], srem[1:], trem[1:], cost + addcost),
+                    #substition
+                    #adds first character of srem to spast, removes from srem
+                    #adds first character of trem to tpast, removes from trem
                    lrec(spast + '_', tpast + trem[0], srem, trem[1:], cost + inscost),
+                    #insertion
+                    #adds underscore to spast to represent an insertion
+                    #add first character of trem to tpast, removes from trem
                    lrec(spast + srem[0], tpast + '_', srem[1:], trem, cost + delcost)),
+                    #deletion
+                    #adds first character of srem to spast, removes from srem
+                    #adds underscore to tpast to represent an deletion
                    key = lambda x: x[4])
+                    #finds the minimum cost
 
     answer = lrec('', '', s, t, 0)
+    #spast and tpast are initialized as empty strings as no characters have been processed yet
+    #srem and trem are initialized as the full strings as they have yet to be processed
+    #cost initialized to 0
     return answer[0],answer[1],answer[4]
-    '''calculates the minimum number of changes needed to change s to t'''
 
 
 def memolrec(func):
-    """Memoizer for Levenshtein (cache to check if distance between s and t has already been calculated
-    before to save time."""
+    """Memoizer for Levenshtein (cache to check if Levenshtein distance between s and t has already been calculated
+    before to save time, as Levenshtein is a recursive algorithm that repeatedly solves subproblems."""
     cache = {}
     @wraps(func)
     def wrap(sp, tp, sr, tr, cost):
