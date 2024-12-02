@@ -173,8 +173,8 @@ def prefix_suffix_rules_get(lemma, form):
             #iterates through length of form root
             prules.add((inp + fr[:i],outp + fr[:i]))
             #inp and outp, plus the form root sliced from the beginning to index i
-    prules = {(x[0].replace('_',''), x[1].replace('_','')) for x in prules}
-    #removes underscores from prefix rules by replacing with empty strings
+            prules = {(x[0].replace('_',''), x[1].replace('_','')) for x in prules}
+            #removes underscores from prefix rules by replacing with empty strings
 
     return prules, srules
     #returns set of prefix and suffix rules, respectively
@@ -184,11 +184,16 @@ def apply_best_rule(lemma, msd, allprules, allsrules):
     """Applies the longest-matching suffix-changing rule given an input
     form and the MSD. Length ties in suffix rules are broken by frequency.
     For prefix-changing rules, only the most frequent rule is chosen."""
+    #lemma: base
+    #msd: morphosyntactic description (eg. past, plural, etc.)
+    #allprules: dictionary of prefix rules grouped by msd
+    #allsrules: dictionary of suffix rules grouped by msd
 
     bestrulelen = 0
     base = "<" + lemma + ">"
+    #wrap lemma with '<' and '>' to match rule format
     if msd not in allprules and msd not in allsrules:
-        return lemma # Haven't seen this inflection, so bail out
+        return lemma #haven't seen this inflection, so bail out
 
     if msd in allsrules:
         applicablerules = [(x[0],x[1],y) for x,y in allsrules[msd].items() if x[0] in base]
