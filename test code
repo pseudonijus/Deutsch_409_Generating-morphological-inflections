@@ -296,7 +296,7 @@ def main(argv):
         # Run eval on dev
         #where we can test specific verbs
         devlines = [line.strip() for line in open(path + lang + ".dev", "r", encoding='utf8') if line != '\n']
-        print('devlines:' + devlines)
+        print('devlines: ' + devlines)
         if TEST:
             devlines = [line.strip() for line in open(path + lang + ".tst", "r", encoding='utf8') if line != '\n']
         numcorrect = 0
