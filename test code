@@ -294,6 +294,7 @@ def main(argv):
 
         # Run eval on dev
         devlines = [line.strip() for line in open(path + lang + ".dev", "r", encoding='utf8') if line != '\n']
+        print('devlines:' + devlines)
         if TEST:
             devlines = [line.strip() for line in open(path + lang + ".tst", "r", encoding='utf8') if line != '\n']
         numcorrect = 0
@@ -302,10 +303,12 @@ def main(argv):
             outfile = open(path + lang + ".out", "w", encoding='utf8')
         for l in devlines:
             lemma, msd, correct = l.split(u'\t')
+            print('lemma:' + lemma, 'correct:' + correct)
 #                    lemma, msd, = l.split(u'\t')
             if prefbias > suffbias:
                 lemma = lemma[::-1]
             outform = apply_best_rule(lemma, msd, allprules, allsrules)
+            print('outform:' + outform)
             if prefbias > suffbias:
                 outform = outform[::-1]
                 lemma = lemma[::-1]
