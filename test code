@@ -250,6 +250,7 @@ def main(argv):
             quit()
 
     totalavg, numlang = 0.0, 0
+    #where we can train on specific verbs
     for lang in [os.path.splitext(d)[0] for d in os.listdir(path) if '.trn' in d]:
         # initializes allprules and allsrules here
         allprules, allsrules = {}, {}
@@ -293,6 +294,7 @@ def main(argv):
                     allsrules[msd][(r[0],r[1])] = 1
 
         # Run eval on dev
+        #where we can test specific verbs
         devlines = [line.strip() for line in open(path + lang + ".dev", "r", encoding='utf8') if line != '\n']
         print('devlines:' + devlines)
         if TEST:
