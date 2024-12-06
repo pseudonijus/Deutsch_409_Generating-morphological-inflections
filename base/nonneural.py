@@ -214,10 +214,12 @@ def apply_best_rule(lemma, msd, allprules, allsrules):
 
 def numleadingsyms(s, symbol):
     return len(s) - len(s.lstrip(symbol))
+    #returns count of leading occurrences of symbol
 
 
 def numtrailingsyms(s, symbol):
     return len(s) - len(s.rstrip(symbol))
+    #returns count of trailing occurrences of symbol
 
 ###############################################################################
 
@@ -247,11 +249,12 @@ def main(argv):
             quit()
 
     totalavg, numlang = 0.0, 0
-    for lang in [os.path.splitext(d)[0] for d in os.listdir(path) if '.trn' in d]:
-        allprules, allsrules = {}, {}
+    for lang in [os.path.splitext(d)[0] for d in os.listdir(path) if '.trn' in d]: #identifies all .trn files in directory
+        allprules, allsrules = {}, {} #initializes allprules and allsrules to empty dictionaries
         if not os.path.isfile(path + lang +  ".trn"):
             continue
         lines = [line.strip() for line in open(path + lang + ".trn", "r", encoding='utf8') if line != '\n']
+        #reads and cleans lines from training file
 
         # First, test if language is predominantly suffixing or prefixing
         # If prefixing, work with reversed strings
@@ -259,15 +262,19 @@ def main(argv):
         for l in lines:
             lemma, _, form = l.split(u'\t')
             aligned = halign(lemma, form)
+            #aligns lemma and form
             if ' ' not in aligned[0] and ' ' not in aligned[1] and '-' not in aligned[0] and '-' not in aligned[1]:
                 prefbias += numleadingsyms(aligned[0],'_') + numleadingsyms(aligned[1],'_')
                 suffbias += numtrailingsyms(aligned[0],'_') + numtrailingsyms(aligned[1],'_')
+                #counts leading/trailing underscores to detect whether the language has prefix or suffix bias
         for l in lines: # Read in lines and extract transformation rules from pairs
             lemma, msd, form = l.split(u'\t')
             if prefbias > suffbias:
                 lemma = lemma[::-1]
                 form = form[::-1]
+                #if language has prefix bias, reverses lemma and form to treat prefixes as suffixes
             prules, srules = prefix_suffix_rules_get(lemma, form)
+            #generates transformation rules
 
             if msd not in allprules and len(prules) > 0:
                 allprules[msd] = {}
