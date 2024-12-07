@@ -1,3 +1,7 @@
+If you open this file in a compatible viewer (e.g., cat or less -R), you'll see the colors.
+Red (starting with <) is deu.out
+Green (starting with >) is deu.dev
+
 13c13
 < Abstieg	N;ACC(PL)	Abstiegen
 ---
