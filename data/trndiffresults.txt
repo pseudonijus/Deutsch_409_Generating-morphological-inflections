@@ -1,0 +1,1570 @@
+2,13c2,13
+< Aa machen	V;IMP;NOM(2,PL)	Aa macht Aa
+< Aa machen	V;IMP;NOM(2,SG)	Aa mach Aa
+< Aa machen	V;IND;PRS;NOM(1,PL)	Aa machen Aa
+< Aa machen	V;IND;PRS;NOM(1,SG)	Aa mache Aa
+< Aa machen	V;IND;PRS;NOM(2,PL)	Aa macht Aa
+< Aa machen	V;IND;PRS;NOM(2,SG)	Aa machst Aa
+< Aa machen	V;IND;PRS;NOM(3,SG)	Aa macht Aa
+< Aa machen	V;IND;PST;NOM(1,PL)	Aa machten Aa
+< Aa machen	V;IND;PST;NOM(1,SG)	Aa machte Aa
+< Aa machen	V;IND;PST;NOM(2,PL)	Aa machtet Aa
+< Aa machen	V;IND;PST;NOM(3,PL)	Aa machten Aa
+< Aa machen	V;IND;PST;NOM(3,SG)	Aa machte Aa
+---
+> Aa machen	V;IMP;NOM(2,PL)	macht Aa
+> Aa machen	V;IMP;NOM(2,SG)	mach Aa
+> Aa machen	V;IND;PRS;NOM(1,PL)	machen Aa
+> Aa machen	V;IND;PRS;NOM(1,SG)	mache Aa
+> Aa machen	V;IND;PRS;NOM(2,PL)	macht Aa
+> Aa machen	V;IND;PRS;NOM(2,SG)	machst Aa
+> Aa machen	V;IND;PRS;NOM(3,SG)	macht Aa
+> Aa machen	V;IND;PST;NOM(1,PL)	machten Aa
+> Aa machen	V;IND;PST;NOM(1,SG)	machte Aa
+> Aa machen	V;IND;PST;NOM(2,PL)	machtet Aa
+> Aa machen	V;IND;PST;NOM(3,PL)	machten Aa
+> Aa machen	V;IND;PST;NOM(3,SG)	machte Aa
+15,18c15,18
+< Aa machen	V;SBJV;PRS;NOM(1,PL)	Aa machen Aa
+< Aa machen	V;SBJV;PST;NOM(1,PL)	Aa machten Aa
+< Aa machen	V;SBJV;PST;NOM(2,SG)	Aa machtest Aa
+< Aa machen	V;SBJV;PST;NOM(3,PL)	Aa machten Aa
+---
+> Aa machen	V;SBJV;PRS;NOM(1,PL)	machen Aa
+> Aa machen	V;SBJV;PST;NOM(1,PL)	machten Aa
+> Aa machen	V;SBJV;PST;NOM(2,SG)	machtest Aa
+> Aa machen	V;SBJV;PST;NOM(3,PL)	machten Aa
+428,431c428,431
+< Berliner Schnauze	N;ACC(SG)	Berliner Schnauze
+< Berliner Schnauze	N;DAT(SG)	Berliner Schnauze
+< Berliner Schnauze	N;GEN(SG)	Berliner Schnauze
+< Berliner Schnauze	N;NOM(SG)	Berliner Schnauze
+---
+> Berliner Schnauze	N;ACC(SG)	Schnauze
+> Berliner Schnauze	N;DAT(SG)	Schnauze
+> Berliner Schnauze	N;GEN(SG)	Schnauze
+> Berliner Schnauze	N;NOM(SG)	Schnauze
+481,485c481,485
+< Bindfäden regnen	V;IMP;NOM(2,PL)	Bindfäden
+< Bindfäden regnen	V;IND;PRS;NOM(2,PL)	Bindfäden
+< Bindfäden regnen	V;IND;PRS;NOM(2,SG)	Bindfäden
+< Bindfäden regnen	V;IND;PRS;NOM(3,PL)	Bindfäden
+< Bindfäden regnen	V;IND;PRS;NOM(3,SG)	Bindfäden
+---
+> Bindfäden regnen	V;IMP;NOM(2,PL)	regnet Bindfäden
+> Bindfäden regnen	V;IND;PRS;NOM(2,PL)	regnet Bindfäden
+> Bindfäden regnen	V;IND;PRS;NOM(2,SG)	regnest Bindfäden
+> Bindfäden regnen	V;IND;PRS;NOM(3,PL)	regnen Bindfäden
+> Bindfäden regnen	V;IND;PRS;NOM(3,SG)	regnet Bindfäden
+487c487
+< Bindfäden regnen	V;IND;PST;NOM(1,SG)	Bindfäden
+---
+> Bindfäden regnen	V;IND;PST;NOM(1,SG)	regnete Bindfäden
+491,495c491,495
+< Bindfäden regnen	V;IND;PST;NOM(3,SG)	Bindfäden
+< Bindfäden regnen	V;NFIN	Bindfäden regnen
+< Bindfäden regnen	V;SBJV;PRS;NOM(2,PL)	Bindfäden
+< Bindfäden regnen	V;SBJV;PRS;NOM(3,PL)	Bindfäden
+< Bindfäden regnen	V;SBJV;PRS;NOM(3,SG)	Bindfäden
+---
+> Bindfäden regnen	V;IND;PST;NOM(3,SG)	regnete Bindfäden
+> Bindfäden regnen	V;NFIN	regnen
+> Bindfäden regnen	V;SBJV;PRS;NOM(2,PL)	regnet Bindfäden
+> Bindfäden regnen	V;SBJV;PRS;NOM(3,PL)	regnen Bindfäden
+> Bindfäden regnen	V;SBJV;PRS;NOM(3,SG)	regne Bindfäden
+497c497
+< Bindfäden regnen	V;SBJV;PST;NOM(3,SG)	Bindfäden
+---
+> Bindfäden regnen	V;SBJV;PST;NOM(3,SG)	regnete Bindfäden
+3017,3019c3017,3019
+< abgeben	V;IMP;NOM(2,PL)	abgebt ab
+< abgeben	V;IMP;NOM(2,SG)	abgib ab
+< abgeben	V;IND;PRS;NOM(1,PL)	abgeben ab
+---
+> abgeben	V;IMP;NOM(2,PL)	gebt ab
+> abgeben	V;IMP;NOM(2,SG)	gib ab
+> abgeben	V;IND;PRS;NOM(1,PL)	geben ab
+3021,3023c3021,3023
+< abgeben	V;IND;PST;NOM(1,SG)	ab ab
+< abgeben	V;IND;PST;NOM(2,SG)	abst ab
+< abgeben	V;IND;PST;NOM(3,SG)	ab ab
+---
+> abgeben	V;IND;PST;NOM(1,SG)	gab ab
+> abgeben	V;IND;PST;NOM(2,SG)	gabst ab
+> abgeben	V;IND;PST;NOM(3,SG)	gab ab
+3025,3033c3025,3033
+< abgeben	V;SBJV;PRS;NOM(1,PL)	abgeben ab
+< abgeben	V;SBJV;PRS;NOM(1,SG)	abgebe ab
+< abgeben	V;SBJV;PRS;NOM(2,PL)	abgebet ab
+< abgeben	V;SBJV;PRS;NOM(3,SG)	abgebe ab
+< abgeben	V;SBJV;PST;NOM(1,PL)	abgäben ab
+< abgeben	V;SBJV;PST;NOM(1,SG)	abgäbe ab
+< abgeben	V;SBJV;PST;NOM(2,PL)	abgäbet ab
+< abgeben	V;SBJV;PST;NOM(2,SG)	abgäbest ab
+< abgeben	V;SBJV;PST;NOM(3,SG)	abgäbe ab
+---
+> abgeben	V;SBJV;PRS;NOM(1,PL)	geben ab
+> abgeben	V;SBJV;PRS;NOM(1,SG)	gebe ab
+> abgeben	V;SBJV;PRS;NOM(2,PL)	gebet ab
+> abgeben	V;SBJV;PRS;NOM(3,SG)	gebe ab
+> abgeben	V;SBJV;PST;NOM(1,PL)	gäben ab
+> abgeben	V;SBJV;PST;NOM(1,SG)	gäbe ab
+> abgeben	V;SBJV;PST;NOM(2,PL)	gäbet ab
+> abgeben	V;SBJV;PST;NOM(2,SG)	gäbest ab
+> abgeben	V;SBJV;PST;NOM(3,SG)	gäbe ab
+3036,3049c3036,3049
+< abhaken	V;IMP;NOM(2,PL)	abhakt ab
+< abhaken	V;IMP;NOM(2,SG)	abhak ab
+< abhaken	V;IND;PRS;NOM(1,PL)	abhaken ab
+< abhaken	V;IND;PRS;NOM(1,SG)	abhake ab
+< abhaken	V;IND;PRS;NOM(2,SG)	abhakst ab
+< abhaken	V;IND;PRS;NOM(3,PL)	abhaken ab
+< abhaken	V;IND;PRS;NOM(3,SG)	abhakt ab
+< abhaken	V;IND;PST;NOM(1,SG)	abhakte ab
+< abhaken	V;IND;PST;NOM(3,PL)	abhakten ab
+< abhaken	V;SBJV;PRS;NOM(1,PL)	abhaken ab
+< abhaken	V;SBJV;PRS;NOM(2,PL)	abhaket ab
+< abhaken	V;SBJV;PRS;NOM(2,SG)	abhakest ab
+< abhaken	V;SBJV;PST;NOM(2,PL)	abhaktet ab
+< abhaken	V;SBJV;PST;NOM(3,SG)	abhakte ab
+---
+> abhaken	V;IMP;NOM(2,PL)	hakt ab
+> abhaken	V;IMP;NOM(2,SG)	hak ab
+> abhaken	V;IND;PRS;NOM(1,PL)	haken ab
+> abhaken	V;IND;PRS;NOM(1,SG)	hake ab
+> abhaken	V;IND;PRS;NOM(2,SG)	hakst ab
+> abhaken	V;IND;PRS;NOM(3,PL)	haken ab
+> abhaken	V;IND;PRS;NOM(3,SG)	hakt ab
+> abhaken	V;IND;PST;NOM(1,SG)	hakte ab
+> abhaken	V;IND;PST;NOM(3,PL)	hakten ab
+> abhaken	V;SBJV;PRS;NOM(1,PL)	haken ab
+> abhaken	V;SBJV;PRS;NOM(2,PL)	haket ab
+> abhaken	V;SBJV;PRS;NOM(2,SG)	hakest ab
+> abhaken	V;SBJV;PST;NOM(2,PL)	haktet ab
+> abhaken	V;SBJV;PST;NOM(3,SG)	hakte ab
+3051,3058c3051,3058
+< abholen	V;IND;PRS;NOM(1,PL)	abholen ab
+< abholen	V;IND;PRS;NOM(2,PL)	abholt ab
+< abholen	V;IND;PRS;NOM(3,SG)	abholt ab
+< abholen	V;IND;PST;NOM(1,SG)	abholte ab
+< abholen	V;IND;PST;NOM(2,PL)	abholtet ab
+< abholen	V;IND;PST;NOM(2,SG)	abholtest ab
+< abholen	V;IND;PST;NOM(3,PL)	abholten ab
+< abholen	V;IND;PST;NOM(3,SG)	abholte ab
+---
+> abholen	V;IND;PRS;NOM(1,PL)	holen ab
+> abholen	V;IND;PRS;NOM(2,PL)	holt ab
+> abholen	V;IND;PRS;NOM(3,SG)	holt ab
+> abholen	V;IND;PST;NOM(1,SG)	holte ab
+> abholen	V;IND;PST;NOM(2,PL)	holtet ab
+> abholen	V;IND;PST;NOM(2,SG)	holtest ab
+> abholen	V;IND;PST;NOM(3,PL)	holten ab
+> abholen	V;IND;PST;NOM(3,SG)	holte ab
+3060,3085c3060,3085
+< abholen	V;SBJV;PRS;NOM(1,SG)	abhole ab
+< abholen	V;SBJV;PRS;NOM(2,PL)	abholet ab
+< abholen	V;SBJV;PRS;NOM(2,SG)	abholest ab
+< abholen	V;SBJV;PRS;NOM(3,PL)	abholen ab
+< abholen	V;SBJV;PRS;NOM(3,SG)	abhole ab
+< abholen	V;SBJV;PST;NOM(2,PL)	abholtet ab
+< abholen	V;SBJV;PST;NOM(2,SG)	abholtest ab
+< abholen	V;SBJV;PST;NOM(3,SG)	abholte ab
+< abrunden	V;IMP;NOM(2,PL)	abrundet ab
+< abrunden	V;IMP;NOM(2,SG)	abrunde auf
+< abrunden	V;IND;PRS;NOM(1,PL)	abrunden ab
+< abrunden	V;IND;PRS;NOM(2,PL)	abrundet auf
+< abrunden	V;IND;PRS;NOM(2,SG)	abrundest auf
+< abrunden	V;IND;PRS;NOM(3,PL)	abrunden ab
+< abrunden	V;IND;PST;NOM(1,PL)	abrundeten auf
+< abrunden	V;IND;PST;NOM(2,PL)	abrundetet auf
+< abrunden	V;IND;PST;NOM(2,SG)	abrundetest ab
+< abrunden	V;SBJV;PRS;NOM(1,SG)	abrunde ab
+< abrunden	V;SBJV;PRS;NOM(2,PL)	abrundet ab
+< abrunden	V;SBJV;PRS;NOM(2,SG)	abrundest auf
+< abrunden	V;SBJV;PRS;NOM(3,PL)	abrunden ab
+< abrunden	V;SBJV;PRS;NOM(3,SG)	abrunde auf
+< abrunden	V;SBJV;PST;NOM(1,PL)	abrundeten ab
+< abrunden	V;SBJV;PST;NOM(2,PL)	abrundetet auf
+< abrunden	V;SBJV;PST;NOM(2,SG)	abrundetest auf
+< abrunden	V;SBJV;PST;NOM(3,SG)	abrundete auf
+---
+> abholen	V;SBJV;PRS;NOM(1,SG)	hole ab
+> abholen	V;SBJV;PRS;NOM(2,PL)	holet ab
+> abholen	V;SBJV;PRS;NOM(2,SG)	holest ab
+> abholen	V;SBJV;PRS;NOM(3,PL)	holen ab
+> abholen	V;SBJV;PRS;NOM(3,SG)	hole ab
+> abholen	V;SBJV;PST;NOM(2,PL)	holtet ab
+> abholen	V;SBJV;PST;NOM(2,SG)	holtest ab
+> abholen	V;SBJV;PST;NOM(3,SG)	holte ab
+> abrunden	V;IMP;NOM(2,PL)	rundet ab
+> abrunden	V;IMP;NOM(2,SG)	runde ab
+> abrunden	V;IND;PRS;NOM(1,PL)	runden ab
+> abrunden	V;IND;PRS;NOM(2,PL)	rundet ab
+> abrunden	V;IND;PRS;NOM(2,SG)	rundest ab
+> abrunden	V;IND;PRS;NOM(3,PL)	runden ab
+> abrunden	V;IND;PST;NOM(1,PL)	rundeten ab
+> abrunden	V;IND;PST;NOM(2,PL)	rundetet ab
+> abrunden	V;IND;PST;NOM(2,SG)	rundetest ab
+> abrunden	V;SBJV;PRS;NOM(1,SG)	runde ab
+> abrunden	V;SBJV;PRS;NOM(2,PL)	rundet ab
+> abrunden	V;SBJV;PRS;NOM(2,SG)	rundest ab
+> abrunden	V;SBJV;PRS;NOM(3,PL)	runden ab
+> abrunden	V;SBJV;PRS;NOM(3,SG)	runde ab
+> abrunden	V;SBJV;PST;NOM(1,PL)	rundeten ab
+> abrunden	V;SBJV;PST;NOM(2,PL)	rundetet ab
+> abrunden	V;SBJV;PST;NOM(2,SG)	rundetest ab
+> abrunden	V;SBJV;PST;NOM(3,SG)	rundete ab
+3088,3094c3088,3094
+< abschaffen	V;IMP;NOM(2,PL)	abschafft ab
+< abschaffen	V;IMP;NOM(2,SG)	abschaff ab
+< abschaffen	V;IND;PRS;NOM(1,PL)	abschaffen ab
+< abschaffen	V;IND;PRS;NOM(3,PL)	abschaffen ab
+< abschaffen	V;IND;PST;NOM(1,PL)	abschafften ab
+< abschaffen	V;IND;PST;NOM(1,SG)	abschaffte ab
+< abschaffen	V;IND;PST;NOM(2,PL)	abschafftet ab
+---
+> abschaffen	V;IMP;NOM(2,PL)	schafft ab
+> abschaffen	V;IMP;NOM(2,SG)	schaff ab
+> abschaffen	V;IND;PRS;NOM(1,PL)	schaffen ab
+> abschaffen	V;IND;PRS;NOM(3,PL)	schaffen ab
+> abschaffen	V;IND;PST;NOM(1,PL)	schafften ab
+> abschaffen	V;IND;PST;NOM(1,SG)	schaffte ab
+> abschaffen	V;IND;PST;NOM(2,PL)	schafftet ab
+3096,3111c3096,3111
+< abschaffen	V;SBJV;PRS;NOM(1,SG)	abschaffe ab
+< abschaffen	V;SBJV;PRS;NOM(2,PL)	abschaffet ab
+< abschaffen	V;SBJV;PRS;NOM(2,SG)	abschaffest ab
+< abschaffen	V;SBJV;PRS;NOM(3,PL)	abschaffen ab
+< abschaffen	V;SBJV;PST;NOM(1,PL)	abschafften ab
+< abschaffen	V;SBJV;PST;NOM(3,PL)	abschafften ab
+< abschaffen	V;SBJV;PST;NOM(3,SG)	abschaffte ab
+< abspecken	V;IMP;NOM(2,SG)	abspeck ab
+< abspecken	V;IND;PRS;NOM(1,SG)	abspecke ab
+< abspecken	V;IND;PRS;NOM(2,PL)	abspeckt ab
+< abspecken	V;IND;PRS;NOM(2,SG)	abspeckst ab
+< abspecken	V;IND;PRS;NOM(3,PL)	abspecken ab
+< abspecken	V;IND;PRS;NOM(3,SG)	abspeckt ab
+< abspecken	V;IND;PST;NOM(1,SG)	abspeckte ab
+< abspecken	V;IND;PST;NOM(2,PL)	abspecktet ab
+< abspecken	V;IND;PST;NOM(3,PL)	abspeckten ab
+---
+> abschaffen	V;SBJV;PRS;NOM(1,SG)	schaffe ab
+> abschaffen	V;SBJV;PRS;NOM(2,PL)	schaffet ab
+> abschaffen	V;SBJV;PRS;NOM(2,SG)	schaffest ab
+> abschaffen	V;SBJV;PRS;NOM(3,PL)	schaffen ab
+> abschaffen	V;SBJV;PST;NOM(1,PL)	schafften ab
+> abschaffen	V;SBJV;PST;NOM(3,PL)	schafften ab
+> abschaffen	V;SBJV;PST;NOM(3,SG)	schaffte ab
+> abspecken	V;IMP;NOM(2,SG)	speck ab
+> abspecken	V;IND;PRS;NOM(1,SG)	specke ab
+> abspecken	V;IND;PRS;NOM(2,PL)	speckt ab
+> abspecken	V;IND;PRS;NOM(2,SG)	speckst ab
+> abspecken	V;IND;PRS;NOM(3,PL)	specken ab
+> abspecken	V;IND;PRS;NOM(3,SG)	speckt ab
+> abspecken	V;IND;PST;NOM(1,SG)	speckte ab
+> abspecken	V;IND;PST;NOM(2,PL)	specktet ab
+> abspecken	V;IND;PST;NOM(3,PL)	speckten ab
+3113,3119c3113,3119
+< abspecken	V;SBJV;PRS;NOM(1,PL)	abspecken ab
+< abspecken	V;SBJV;PRS;NOM(1,SG)	abspecke ab
+< abspecken	V;SBJV;PRS;NOM(2,SG)	abspeckest ab
+< abspecken	V;SBJV;PRS;NOM(3,PL)	abspecken ab
+< abspecken	V;SBJV;PST;NOM(1,SG)	abspeckte ab
+< abspecken	V;SBJV;PST;NOM(2,PL)	abspecktet ab
+< abspecken	V;SBJV;PST;NOM(3,PL)	abspeckten ab
+---
+> abspecken	V;SBJV;PRS;NOM(1,PL)	specken ab
+> abspecken	V;SBJV;PRS;NOM(1,SG)	specke ab
+> abspecken	V;SBJV;PRS;NOM(2,SG)	speckest ab
+> abspecken	V;SBJV;PRS;NOM(3,PL)	specken ab
+> abspecken	V;SBJV;PST;NOM(1,SG)	speckte ab
+> abspecken	V;SBJV;PST;NOM(2,PL)	specktet ab
+> abspecken	V;SBJV;PST;NOM(3,PL)	speckten ab
+3122,3136c3122,3136
+< abspielen	V;IMP;NOM(2,PL)	abspielt ab
+< abspielen	V;IMP;NOM(2,SG)	abspiel ab
+< abspielen	V;IND;PRS;NOM(1,PL)	abspielen ab
+< abspielen	V;IND;PRS;NOM(1,SG)	abspiele ab
+< abspielen	V;IND;PRS;NOM(2,SG)	abspielst ab
+< abspielen	V;IND;PRS;NOM(3,SG)	abspielt ab
+< abspielen	V;IND;PST;NOM(1,SG)	abspielte ab
+< abspielen	V;IND;PST;NOM(3,PL)	abspielten ab
+< abspielen	V;IND;PST;NOM(3,SG)	abspielte ab
+< abspielen	V;SBJV;PRS;NOM(1,SG)	abspiele ab
+< abspielen	V;SBJV;PRS;NOM(2,SG)	abspielest ab
+< abspielen	V;SBJV;PRS;NOM(3,PL)	abspielen ab
+< abspielen	V;SBJV;PST;NOM(1,SG)	abspielte ab
+< abspielen	V;SBJV;PST;NOM(3,PL)	abspielten ab
+< abspielen	V;SBJV;PST;NOM(3,SG)	abspielte ab
+---
+> abspielen	V;IMP;NOM(2,PL)	spielt ab
+> abspielen	V;IMP;NOM(2,SG)	spiel ab
+> abspielen	V;IND;PRS;NOM(1,PL)	spielen ab
+> abspielen	V;IND;PRS;NOM(1,SG)	spiele ab
+> abspielen	V;IND;PRS;NOM(2,SG)	spielst ab
+> abspielen	V;IND;PRS;NOM(3,SG)	spielt ab
+> abspielen	V;IND;PST;NOM(1,SG)	spielte ab
+> abspielen	V;IND;PST;NOM(3,PL)	spielten ab
+> abspielen	V;IND;PST;NOM(3,SG)	spielte ab
+> abspielen	V;SBJV;PRS;NOM(1,SG)	spiele ab
+> abspielen	V;SBJV;PRS;NOM(2,SG)	spielest ab
+> abspielen	V;SBJV;PRS;NOM(3,PL)	spielen ab
+> abspielen	V;SBJV;PST;NOM(1,SG)	spielte ab
+> abspielen	V;SBJV;PST;NOM(3,PL)	spielten ab
+> abspielen	V;SBJV;PST;NOM(3,SG)	spielte ab
+3190,3197c3190,3197
+< anhimmeln	V;IMP;NOM(2,PL)	anhimmelt an
+< anhimmeln	V;IMP;NOM(2,SG)	anhimmle an
+< anhimmeln	V;IND;PRS;NOM(1,SG)	anhimmle an
+< anhimmeln	V;IND;PRS;NOM(2,PL)	anhimmelt an
+< anhimmeln	V;IND;PRS;NOM(2,SG)	anhimmelst an
+< anhimmeln	V;IND;PRS;NOM(3,SG)	anhimmelt an
+< anhimmeln	V;IND;PST;NOM(2,PL)	anhimmeltet an
+< anhimmeln	V;IND;PST;NOM(3,PL)	anhimmelten an
+---
+> anhimmeln	V;IMP;NOM(2,PL)	himmelt an
+> anhimmeln	V;IMP;NOM(2,SG)	himmle an
+> anhimmeln	V;IND;PRS;NOM(1,SG)	himmle an
+> anhimmeln	V;IND;PRS;NOM(2,PL)	himmelt an
+> anhimmeln	V;IND;PRS;NOM(2,SG)	himmelst an
+> anhimmeln	V;IND;PRS;NOM(3,SG)	himmelt an
+> anhimmeln	V;IND;PST;NOM(2,PL)	himmeltet an
+> anhimmeln	V;IND;PST;NOM(3,PL)	himmelten an
+3199,3207c3199,3207
+< anhimmeln	V;SBJV;PRS;NOM(2,PL)	anhimmelet an
+< anhimmeln	V;SBJV;PRS;NOM(2,SG)	anhimmelest an
+< anhimmeln	V;SBJV;PRS;NOM(3,PL)	anhimmeln an
+< anhimmeln	V;SBJV;PST;NOM(1,PL)	anhimmelten an
+< anhimmeln	V;SBJV;PST;NOM(1,SG)	anhimmelte an
+< anhimmeln	V;SBJV;PST;NOM(2,PL)	anhimmeltet an
+< anhimmeln	V;SBJV;PST;NOM(2,SG)	anhimmeltest an
+< anhimmeln	V;SBJV;PST;NOM(3,PL)	anhimmelten an
+< anhimmeln	V;SBJV;PST;NOM(3,SG)	anhimmelte an
+---
+> anhimmeln	V;SBJV;PRS;NOM(2,PL)	himmelet an
+> anhimmeln	V;SBJV;PRS;NOM(2,SG)	himmelest an
+> anhimmeln	V;SBJV;PRS;NOM(3,PL)	himmeln an
+> anhimmeln	V;SBJV;PST;NOM(1,PL)	himmelten an
+> anhimmeln	V;SBJV;PST;NOM(1,SG)	himmelte an
+> anhimmeln	V;SBJV;PST;NOM(2,PL)	himmeltet an
+> anhimmeln	V;SBJV;PST;NOM(2,SG)	himmeltest an
+> anhimmeln	V;SBJV;PST;NOM(3,PL)	himmelten an
+> anhimmeln	V;SBJV;PST;NOM(3,SG)	himmelte an
+3209,3215c3209,3215
+< anmachen	V;IMP;NOM(2,PL)	anmacht Aa
+< anmachen	V;IMP;NOM(2,SG)	anmach Aa
+< anmachen	V;IND;PRS;NOM(1,PL)	anmachen Aa
+< anmachen	V;IND;PRS;NOM(2,SG)	anmachst Aa
+< anmachen	V;IND;PRS;NOM(3,PL)	anmachen an
+< anmachen	V;IND;PRS;NOM(3,SG)	anmacht Aa
+< anmachen	V;IND;PST;NOM(3,PL)	anmachten Aa
+---
+> anmachen	V;IMP;NOM(2,PL)	macht an
+> anmachen	V;IMP;NOM(2,SG)	mach an
+> anmachen	V;IND;PRS;NOM(1,PL)	machen an
+> anmachen	V;IND;PRS;NOM(2,SG)	machst an
+> anmachen	V;IND;PRS;NOM(3,PL)	machen an
+> anmachen	V;IND;PRS;NOM(3,SG)	macht an
+> anmachen	V;IND;PST;NOM(3,PL)	machten an
+3217,3224c3217,3224
+< anmachen	V;SBJV;PRS;NOM(1,SG)	anmache an
+< anmachen	V;SBJV;PRS;NOM(2,PL)	anmachet an
+< anmachen	V;SBJV;PRS;NOM(2,SG)	anmachest an
+< anmachen	V;SBJV;PRS;NOM(3,SG)	anmache an
+< anmachen	V;SBJV;PST;NOM(1,SG)	anmachte an
+< anmachen	V;SBJV;PST;NOM(2,SG)	anmachtest Aa
+< anmachen	V;SBJV;PST;NOM(3,PL)	anmachten Aa
+< anmachen	V;SBJV;PST;NOM(3,SG)	anmachte an
+---
+> anmachen	V;SBJV;PRS;NOM(1,SG)	mache an
+> anmachen	V;SBJV;PRS;NOM(2,PL)	machet an
+> anmachen	V;SBJV;PRS;NOM(2,SG)	machest an
+> anmachen	V;SBJV;PRS;NOM(3,SG)	mache an
+> anmachen	V;SBJV;PST;NOM(1,SG)	machte an
+> anmachen	V;SBJV;PST;NOM(2,SG)	machtest an
+> anmachen	V;SBJV;PST;NOM(3,PL)	machten an
+> anmachen	V;SBJV;PST;NOM(3,SG)	machte an
+3243,3250c3243,3250
+< anpassen	V;IMP;NOM(2,PL)	anpasst an
+< anpassen	V;IND;PRS;NOM(1,PL)	anpassen an
+< anpassen	V;IND;PRS;NOM(2,PL)	anpasst an
+< anpassen	V;IND;PRS;NOM(3,PL)	anpassen an
+< anpassen	V;IND;PRS;NOM(3,SG)	anpasst an
+< anpassen	V;IND;PST;NOM(2,PL)	anpasstet an
+< anpassen	V;IND;PST;NOM(3,PL)	anpassten an
+< anpassen	V;IND;PST;NOM(3,SG)	anpasste an
+---
+> anpassen	V;IMP;NOM(2,PL)	passt an
+> anpassen	V;IND;PRS;NOM(1,PL)	passen an
+> anpassen	V;IND;PRS;NOM(2,PL)	passt an
+> anpassen	V;IND;PRS;NOM(3,PL)	passen an
+> anpassen	V;IND;PRS;NOM(3,SG)	passt an
+> anpassen	V;IND;PST;NOM(2,PL)	passtet an
+> anpassen	V;IND;PST;NOM(3,PL)	passten an
+> anpassen	V;IND;PST;NOM(3,SG)	passte an
+3252,3258c3252,3258
+< anpassen	V;SBJV;PRS;NOM(1,PL)	anpassen an
+< anpassen	V;SBJV;PRS;NOM(1,SG)	anpasse an
+< anpassen	V;SBJV;PRS;NOM(2,PL)	anpasset an
+< anpassen	V;SBJV;PRS;NOM(3,SG)	anpasse an
+< anpassen	V;SBJV;PST;NOM(1,SG)	anpasste an
+< anpassen	V;SBJV;PST;NOM(3,PL)	anpassten an
+< anpassen	V;SBJV;PST;NOM(3,SG)	anpasste an
+---
+> anpassen	V;SBJV;PRS;NOM(1,PL)	passen an
+> anpassen	V;SBJV;PRS;NOM(1,SG)	passe an
+> anpassen	V;SBJV;PRS;NOM(2,PL)	passet an
+> anpassen	V;SBJV;PRS;NOM(3,SG)	passe an
+> anpassen	V;SBJV;PST;NOM(1,SG)	passte an
+> anpassen	V;SBJV;PST;NOM(3,PL)	passten an
+> anpassen	V;SBJV;PST;NOM(3,SG)	passte an
+3260,3269c3260,3269
+< anrichten	V;IMP;NOM(2,PL)	anrichtet an
+< anrichten	V;IMP;NOM(2,SG)	anrichte an
+< anrichten	V;IND;PRS;NOM(1,PL)	anrichten an
+< anrichten	V;IND;PRS;NOM(1,SG)	anrichte an
+< anrichten	V;IND;PRS;NOM(2,PL)	anrichtet an
+< anrichten	V;IND;PRS;NOM(2,SG)	anrichtest an
+< anrichten	V;IND;PRS;NOM(3,SG)	anrichtet an
+< anrichten	V;IND;PST;NOM(1,PL)	anrichteten an
+< anrichten	V;IND;PST;NOM(2,PL)	anrichtetet an
+< anrichten	V;IND;PST;NOM(2,SG)	anrichtetest an
+---
+> anrichten	V;IMP;NOM(2,PL)	richtet an
+> anrichten	V;IMP;NOM(2,SG)	richte an
+> anrichten	V;IND;PRS;NOM(1,PL)	richten an
+> anrichten	V;IND;PRS;NOM(1,SG)	richte an
+> anrichten	V;IND;PRS;NOM(2,PL)	richtet an
+> anrichten	V;IND;PRS;NOM(2,SG)	richtest an
+> anrichten	V;IND;PRS;NOM(3,SG)	richtet an
+> anrichten	V;IND;PST;NOM(1,PL)	richteten an
+> anrichten	V;IND;PST;NOM(2,PL)	richtetet an
+> anrichten	V;IND;PST;NOM(2,SG)	richtetest an
+3271,3275c3271,3275
+< anrichten	V;SBJV;PRS;NOM(1,PL)	anrichten an
+< anrichten	V;SBJV;PRS;NOM(1,SG)	anrichte an
+< anrichten	V;SBJV;PRS;NOM(2,PL)	anrichtet an
+< anrichten	V;SBJV;PRS;NOM(2,SG)	anrichtest an
+< anrichten	V;SBJV;PST;NOM(3,SG)	anrichtete an
+---
+> anrichten	V;SBJV;PRS;NOM(1,PL)	richten an
+> anrichten	V;SBJV;PRS;NOM(1,SG)	richte an
+> anrichten	V;SBJV;PRS;NOM(2,PL)	richtet an
+> anrichten	V;SBJV;PRS;NOM(2,SG)	richtest an
+> anrichten	V;SBJV;PST;NOM(3,SG)	richtete an
+3277,3287c3277,3287
+< anschmiegen	V;IMP;NOM(2,PL)	anschmiegt an
+< anschmiegen	V;IMP;NOM(2,SG)	anschmieg an
+< anschmiegen	V;IND;PRS;NOM(1,PL)	anschmiegen an
+< anschmiegen	V;IND;PRS;NOM(2,PL)	anschmiegt an
+< anschmiegen	V;IND;PRS;NOM(3,PL)	anschmiegen an
+< anschmiegen	V;IND;PRS;NOM(3,SG)	anschmiegt an
+< anschmiegen	V;IND;PST;NOM(1,PL)	anschmiegten an
+< anschmiegen	V;IND;PST;NOM(1,SG)	anschmiegte an
+< anschmiegen	V;IND;PST;NOM(2,PL)	anschmiegtet an
+< anschmiegen	V;IND;PST;NOM(2,SG)	anschmiegtest an
+< anschmiegen	V;IND;PST;NOM(3,PL)	anschmiegten an
+---
+> anschmiegen	V;IMP;NOM(2,PL)	schmiegt an
+> anschmiegen	V;IMP;NOM(2,SG)	schmieg an
+> anschmiegen	V;IND;PRS;NOM(1,PL)	schmiegen an
+> anschmiegen	V;IND;PRS;NOM(2,PL)	schmiegt an
+> anschmiegen	V;IND;PRS;NOM(3,PL)	schmiegen an
+> anschmiegen	V;IND;PRS;NOM(3,SG)	schmiegt an
+> anschmiegen	V;IND;PST;NOM(1,PL)	schmiegten an
+> anschmiegen	V;IND;PST;NOM(1,SG)	schmiegte an
+> anschmiegen	V;IND;PST;NOM(2,PL)	schmiegtet an
+> anschmiegen	V;IND;PST;NOM(2,SG)	schmiegtest an
+> anschmiegen	V;IND;PST;NOM(3,PL)	schmiegten an
+3289,3292c3289,3292
+< anschmiegen	V;SBJV;PRS;NOM(3,PL)	anschmiegen an
+< anschmiegen	V;SBJV;PST;NOM(1,SG)	anschmiegte an
+< anschmiegen	V;SBJV;PST;NOM(3,PL)	anschmiegten an
+< anschmiegen	V;SBJV;PST;NOM(3,SG)	anschmiegte an
+---
+> anschmiegen	V;SBJV;PRS;NOM(3,PL)	schmiegen an
+> anschmiegen	V;SBJV;PST;NOM(1,SG)	schmiegte an
+> anschmiegen	V;SBJV;PST;NOM(3,PL)	schmiegten an
+> anschmiegen	V;SBJV;PST;NOM(3,SG)	schmiegte an
+3295,3302c3295,3302
+< anstehen	V;IMP;NOM(2,PL)	ansteht an
+< anstehen	V;IMP;NOM(2,SG)	ansteh an
+< anstehen	V;IND;PRS;NOM(1,PL)	anstehen an
+< anstehen	V;IND;PRS;NOM(1,SG)	anstehe an
+< anstehen	V;IND;PRS;NOM(3,PL)	anstehen an
+< anstehen	V;IND;PST;NOM(1,PL)	anden an
+< anstehen	V;IND;PST;NOM(2,PL)	andet an
+< anstehen	V;IND;PST;NOM(3,PL)	anden an
+---
+> anstehen	V;IMP;NOM(2,PL)	steht an
+> anstehen	V;IMP;NOM(2,SG)	steh an
+> anstehen	V;IND;PRS;NOM(1,PL)	stehen an
+> anstehen	V;IND;PRS;NOM(1,SG)	stehe an
+> anstehen	V;IND;PRS;NOM(3,PL)	stehen an
+> anstehen	V;IND;PST;NOM(1,PL)	standen an
+> anstehen	V;IND;PST;NOM(2,PL)	standet an
+> anstehen	V;IND;PST;NOM(3,PL)	standen an
+3304,3308c3304,3308
+< anstehen	V;SBJV;PRS;NOM(1,PL)	anstehen an
+< anstehen	V;SBJV;PRS;NOM(1,SG)	anstehe an
+< anstehen	V;SBJV;PRS;NOM(2,PL)	anstehet an
+< anstehen	V;SBJV;PRS;NOM(2,SG)	anstehest an
+< anstehen	V;SBJV;PRS;NOM(3,SG)	anstehe an
+---
+> anstehen	V;SBJV;PRS;NOM(1,PL)	stehen an
+> anstehen	V;SBJV;PRS;NOM(1,SG)	stehe an
+> anstehen	V;SBJV;PRS;NOM(2,PL)	stehet an
+> anstehen	V;SBJV;PRS;NOM(2,SG)	stehest an
+> anstehen	V;SBJV;PRS;NOM(3,SG)	stehe an
+3310c3310
+< anstehen	V;SBJV;PST;NOM(3,PL)	anständen an
+---
+> anstehen	V;SBJV;PST;NOM(3,PL)	ständen an
+3313,3321c3313,3321
+< anstellen	V;IMP;NOM(2,SG)	anstell ein
+< anstellen	V;IND;PRS;NOM(1,PL)	anstellen ein
+< anstellen	V;IND;PRS;NOM(2,PL)	anstellt an
+< anstellen	V;IND;PRS;NOM(3,PL)	anstellen ein
+< anstellen	V;IND;PRS;NOM(3,SG)	anstellt ein
+< anstellen	V;IND;PST;NOM(1,SG)	anstellte ein
+< anstellen	V;IND;PST;NOM(2,PL)	anstelltet ein
+< anstellen	V;IND;PST;NOM(3,PL)	anstellten an
+< anstellen	V;IND;PST;NOM(3,SG)	anstellte ein
+---
+> anstellen	V;IMP;NOM(2,SG)	stell an
+> anstellen	V;IND;PRS;NOM(1,PL)	stellen an
+> anstellen	V;IND;PRS;NOM(2,PL)	stellt an
+> anstellen	V;IND;PRS;NOM(3,PL)	stellen an
+> anstellen	V;IND;PRS;NOM(3,SG)	stellt an
+> anstellen	V;IND;PST;NOM(1,SG)	stellte an
+> anstellen	V;IND;PST;NOM(2,PL)	stelltet an
+> anstellen	V;IND;PST;NOM(3,PL)	stellten an
+> anstellen	V;IND;PST;NOM(3,SG)	stellte an
+3323,3336c3323,3336
+< anstellen	V;SBJV;PRS;NOM(2,PL)	anstellet ein
+< anstellen	V;SBJV;PRS;NOM(2,SG)	anstellest ein
+< anstellen	V;SBJV;PRS;NOM(3,PL)	anstellen ein
+< anstellen	V;SBJV;PST;NOM(1,PL)	anstellten ein
+< anstellen	V;SBJV;PST;NOM(2,PL)	anstelltet ein
+< anstellen	V;SBJV;PST;NOM(3,PL)	anstellten an
+< antreten	V;IMP;NOM(2,PL)	antretet an
+< antreten	V;IMP;NOM(2,SG)	antritt an
+< antreten	V;IND;PRS;NOM(1,SG)	antrete an
+< antreten	V;IND;PRS;NOM(2,PL)	antretet an
+< antreten	V;IND;PST;NOM(1,PL)	antraten an
+< antreten	V;IND;PST;NOM(2,SG)	atest an
+< antreten	V;IND;PST;NOM(3,PL)	antraten an
+< antreten	V;IND;PST;NOM(3,SG)	antrat an
+---
+> anstellen	V;SBJV;PRS;NOM(2,PL)	stellet an
+> anstellen	V;SBJV;PRS;NOM(2,SG)	stellest an
+> anstellen	V;SBJV;PRS;NOM(3,PL)	stellen an
+> anstellen	V;SBJV;PST;NOM(1,PL)	stellten an
+> anstellen	V;SBJV;PST;NOM(2,PL)	stelltet an
+> anstellen	V;SBJV;PST;NOM(3,PL)	stellten an
+> antreten	V;IMP;NOM(2,PL)	tretet an
+> antreten	V;IMP;NOM(2,SG)	tritt an
+> antreten	V;IND;PRS;NOM(1,SG)	trete an
+> antreten	V;IND;PRS;NOM(2,PL)	tretet an
+> antreten	V;IND;PST;NOM(1,PL)	traten an
+> antreten	V;IND;PST;NOM(2,SG)	tratest an
+> antreten	V;IND;PST;NOM(3,PL)	traten an
+> antreten	V;IND;PST;NOM(3,SG)	trat an
+3338,3346c3338,3346
+< antreten	V;SBJV;PRS;NOM(1,PL)	antreten an
+< antreten	V;SBJV;PRS;NOM(2,PL)	antretet an
+< antreten	V;SBJV;PRS;NOM(2,SG)	antretest an
+< antreten	V;SBJV;PRS;NOM(3,SG)	antrete an
+< antreten	V;SBJV;PST;NOM(1,PL)	anträten an
+< antreten	V;SBJV;PST;NOM(1,SG)	anträte an
+< antreten	V;SBJV;PST;NOM(2,SG)	anträtest an
+< antreten	V;SBJV;PST;NOM(3,PL)	anträten an
+< antreten	V;SBJV;PST;NOM(3,SG)	anträte an
+---
+> antreten	V;SBJV;PRS;NOM(1,PL)	treten an
+> antreten	V;SBJV;PRS;NOM(2,PL)	tretet an
+> antreten	V;SBJV;PRS;NOM(2,SG)	tretest an
+> antreten	V;SBJV;PRS;NOM(3,SG)	trete an
+> antreten	V;SBJV;PST;NOM(1,PL)	träten an
+> antreten	V;SBJV;PST;NOM(1,SG)	träte an
+> antreten	V;SBJV;PST;NOM(2,SG)	trätest an
+> antreten	V;SBJV;PST;NOM(3,PL)	träten an
+> antreten	V;SBJV;PST;NOM(3,SG)	träte an
+3401,3410c3401,3410
+< aufklären	V;IMP;NOM(2,PL)	aufklärt auf
+< aufklären	V;IMP;NOM(2,SG)	aufklär auf
+< aufklären	V;IND;PRS;NOM(1,PL)	aufklären auf
+< aufklären	V;IND;PRS;NOM(1,SG)	aufkläre auf
+< aufklären	V;IND;PRS;NOM(2,PL)	aufklärt auf
+< aufklären	V;IND;PRS;NOM(3,PL)	aufklären auf
+< aufklären	V;IND;PRS;NOM(3,SG)	aufklärt auf
+< aufklären	V;IND;PST;NOM(1,PL)	aufklärten auf
+< aufklären	V;IND;PST;NOM(1,SG)	aufklärte auf
+< aufklären	V;IND;PST;NOM(3,SG)	aufklärte auf
+---
+> aufklären	V;IMP;NOM(2,PL)	klärt auf
+> aufklären	V;IMP;NOM(2,SG)	klär auf
+> aufklären	V;IND;PRS;NOM(1,PL)	klären auf
+> aufklären	V;IND;PRS;NOM(1,SG)	kläre auf
+> aufklären	V;IND;PRS;NOM(2,PL)	klärt auf
+> aufklären	V;IND;PRS;NOM(3,PL)	klären auf
+> aufklären	V;IND;PRS;NOM(3,SG)	klärt auf
+> aufklären	V;IND;PST;NOM(1,PL)	klärten auf
+> aufklären	V;IND;PST;NOM(1,SG)	klärte auf
+> aufklären	V;IND;PST;NOM(3,SG)	klärte auf
+3412,3415c3412,3415
+< aufklären	V;SBJV;PRS;NOM(3,SG)	aufkläre auf
+< aufklären	V;SBJV;PST;NOM(1,SG)	aufklärte auf
+< aufklären	V;SBJV;PST;NOM(2,PL)	aufklärtet auf
+< aufklären	V;SBJV;PST;NOM(2,SG)	aufklärtest auf
+---
+> aufklären	V;SBJV;PRS;NOM(3,SG)	kläre auf
+> aufklären	V;SBJV;PST;NOM(1,SG)	klärte auf
+> aufklären	V;SBJV;PST;NOM(2,PL)	klärtet auf
+> aufklären	V;SBJV;PST;NOM(2,SG)	klärtest auf
+3418,3433c3418,3433
+< auflösen	V;IMP;NOM(2,PL)	auflöst auf
+< auflösen	V;IMP;NOM(2,SG)	auflös auf
+< auflösen	V;IND;PRS;NOM(1,PL)	auflösen auf
+< auflösen	V;IND;PRS;NOM(1,SG)	auflöse auf
+< auflösen	V;IND;PRS;NOM(2,SG)	auflöst auf
+< auflösen	V;IND;PRS;NOM(3,SG)	auflöst auf
+< auflösen	V;IND;PST;NOM(2,SG)	auflöstest auf
+< auflösen	V;IND;PST;NOM(3,PL)	auflösten auf
+< auflösen	V;IND;PST;NOM(3,SG)	auflöste auf
+< auflösen	V;SBJV;PRS;NOM(1,SG)	auflöse auf
+< auflösen	V;SBJV;PRS;NOM(2,PL)	auflöset auf
+< auflösen	V;SBJV;PRS;NOM(3,PL)	auflösen auf
+< auflösen	V;SBJV;PRS;NOM(3,SG)	auflöse auf
+< auflösen	V;SBJV;PST;NOM(1,PL)	auflösten auf
+< auflösen	V;SBJV;PST;NOM(1,SG)	auflöste auf
+< auflösen	V;SBJV;PST;NOM(2,SG)	auflöstest auf
+---
+> auflösen	V;IMP;NOM(2,PL)	löst auf
+> auflösen	V;IMP;NOM(2,SG)	lös auf
+> auflösen	V;IND;PRS;NOM(1,PL)	lösen auf
+> auflösen	V;IND;PRS;NOM(1,SG)	löse auf
+> auflösen	V;IND;PRS;NOM(2,SG)	löst auf
+> auflösen	V;IND;PRS;NOM(3,SG)	löst auf
+> auflösen	V;IND;PST;NOM(2,SG)	löstest auf
+> auflösen	V;IND;PST;NOM(3,PL)	lösten auf
+> auflösen	V;IND;PST;NOM(3,SG)	löste auf
+> auflösen	V;SBJV;PRS;NOM(1,SG)	löse auf
+> auflösen	V;SBJV;PRS;NOM(2,PL)	löset auf
+> auflösen	V;SBJV;PRS;NOM(3,PL)	lösen auf
+> auflösen	V;SBJV;PRS;NOM(3,SG)	löse auf
+> auflösen	V;SBJV;PST;NOM(1,PL)	lösten auf
+> auflösen	V;SBJV;PST;NOM(1,SG)	löste auf
+> auflösen	V;SBJV;PST;NOM(2,SG)	löstest auf
+3436,3451c3436,3451
+< aufmuntern	V;IMP;NOM(2,PL)	aufmuntert auf
+< aufmuntern	V;IND;PRS;NOM(1,PL)	aufmuntern auf
+< aufmuntern	V;IND;PRS;NOM(1,SG)	aufmuntre auf
+< aufmuntern	V;IND;PRS;NOM(2,PL)	aufmuntert auf
+< aufmuntern	V;IND;PRS;NOM(2,SG)	aufmunterst auf
+< aufmuntern	V;IND;PRS;NOM(3,PL)	aufmuntern auf
+< aufmuntern	V;IND;PST;NOM(2,PL)	aufmuntertet auf
+< aufmuntern	V;IND;PST;NOM(3,PL)	aufmunterten auf
+< aufmuntern	V;SBJV;PRS;NOM(1,PL)	aufmuntern auf
+< aufmuntern	V;SBJV;PRS;NOM(1,SG)	aufmuntere auf
+< aufmuntern	V;SBJV;PRS;NOM(2,PL)	aufmunteret auf
+< aufmuntern	V;SBJV;PRS;NOM(2,SG)	aufmunterest auf
+< aufmuntern	V;SBJV;PRS;NOM(3,SG)	aufmuntere auf
+< aufmuntern	V;SBJV;PST;NOM(1,PL)	aufmunterten auf
+< aufmuntern	V;SBJV;PST;NOM(1,SG)	aufmunterte auf
+< aufmuntern	V;SBJV;PST;NOM(2,PL)	aufmuntertet auf
+---
+> aufmuntern	V;IMP;NOM(2,PL)	muntert auf
+> aufmuntern	V;IND;PRS;NOM(1,PL)	muntern auf
+> aufmuntern	V;IND;PRS;NOM(1,SG)	muntre auf
+> aufmuntern	V;IND;PRS;NOM(2,PL)	muntert auf
+> aufmuntern	V;IND;PRS;NOM(2,SG)	munterst auf
+> aufmuntern	V;IND;PRS;NOM(3,PL)	muntern auf
+> aufmuntern	V;IND;PST;NOM(2,PL)	muntertet auf
+> aufmuntern	V;IND;PST;NOM(3,PL)	munterten auf
+> aufmuntern	V;SBJV;PRS;NOM(1,PL)	muntern auf
+> aufmuntern	V;SBJV;PRS;NOM(1,SG)	muntere auf
+> aufmuntern	V;SBJV;PRS;NOM(2,PL)	munteret auf
+> aufmuntern	V;SBJV;PRS;NOM(2,SG)	munterest auf
+> aufmuntern	V;SBJV;PRS;NOM(3,SG)	muntere auf
+> aufmuntern	V;SBJV;PST;NOM(1,PL)	munterten auf
+> aufmuntern	V;SBJV;PST;NOM(1,SG)	munterte auf
+> aufmuntern	V;SBJV;PST;NOM(2,PL)	muntertet auf
+3453,3468c3453,3468
+< aufrunden	V;IMP;NOM(2,SG)	aufrunde auf
+< aufrunden	V;IND;PRS;NOM(1,SG)	aufrunde auf
+< aufrunden	V;IND;PRS;NOM(2,PL)	aufrundet auf
+< aufrunden	V;IND;PRS;NOM(2,SG)	aufrundest auf
+< aufrunden	V;IND;PRS;NOM(3,SG)	aufrundet auf
+< aufrunden	V;IND;PST;NOM(1,PL)	aufrundeten auf
+< aufrunden	V;IND;PST;NOM(2,PL)	aufrundetet auf
+< aufrunden	V;IND;PST;NOM(3,PL)	aufrundeten auf
+< aufrunden	V;SBJV;PRS;NOM(1,PL)	aufrunden auf
+< aufrunden	V;SBJV;PRS;NOM(2,SG)	aufrundest auf
+< aufrunden	V;SBJV;PRS;NOM(3,SG)	aufrunde auf
+< aufrunden	V;SBJV;PST;NOM(1,SG)	aufrundete auf
+< aufrunden	V;SBJV;PST;NOM(2,PL)	aufrundetet auf
+< aufrunden	V;SBJV;PST;NOM(2,SG)	aufrundetest auf
+< aufrunden	V;SBJV;PST;NOM(3,PL)	aufrundeten auf
+< aufrunden	V;SBJV;PST;NOM(3,SG)	aufrundete auf
+---
+> aufrunden	V;IMP;NOM(2,SG)	runde auf
+> aufrunden	V;IND;PRS;NOM(1,SG)	runde auf
+> aufrunden	V;IND;PRS;NOM(2,PL)	rundet auf
+> aufrunden	V;IND;PRS;NOM(2,SG)	rundest auf
+> aufrunden	V;IND;PRS;NOM(3,SG)	rundet auf
+> aufrunden	V;IND;PST;NOM(1,PL)	rundeten auf
+> aufrunden	V;IND;PST;NOM(2,PL)	rundetet auf
+> aufrunden	V;IND;PST;NOM(3,PL)	rundeten auf
+> aufrunden	V;SBJV;PRS;NOM(1,PL)	runden auf
+> aufrunden	V;SBJV;PRS;NOM(2,SG)	rundest auf
+> aufrunden	V;SBJV;PRS;NOM(3,SG)	runde auf
+> aufrunden	V;SBJV;PST;NOM(1,SG)	rundete auf
+> aufrunden	V;SBJV;PST;NOM(2,PL)	rundetet auf
+> aufrunden	V;SBJV;PST;NOM(2,SG)	rundetest auf
+> aufrunden	V;SBJV;PST;NOM(3,PL)	rundeten auf
+> aufrunden	V;SBJV;PST;NOM(3,SG)	rundete auf
+3471,3477c3471,3477
+< aufzählen	V;IMP;NOM(2,PL)	aufzählt auf
+< aufzählen	V;IND;PRS;NOM(1,PL)	aufzählen auf
+< aufzählen	V;IND;PRS;NOM(1,SG)	aufzähle auf
+< aufzählen	V;IND;PRS;NOM(3,PL)	aufzählen auf
+< aufzählen	V;IND;PRS;NOM(3,SG)	aufzählt auf
+< aufzählen	V;IND;PST;NOM(1,SG)	aufzählte auf
+< aufzählen	V;IND;PST;NOM(3,SG)	aufzählte auf
+---
+> aufzählen	V;IMP;NOM(2,PL)	zählt auf
+> aufzählen	V;IND;PRS;NOM(1,PL)	zählen auf
+> aufzählen	V;IND;PRS;NOM(1,SG)	zähle auf
+> aufzählen	V;IND;PRS;NOM(3,PL)	zählen auf
+> aufzählen	V;IND;PRS;NOM(3,SG)	zählt auf
+> aufzählen	V;IND;PST;NOM(1,SG)	zählte auf
+> aufzählen	V;IND;PST;NOM(3,SG)	zählte auf
+3479,3486c3479,3486
+< aufzählen	V;SBJV;PRS;NOM(1,PL)	aufzählen auf
+< aufzählen	V;SBJV;PRS;NOM(2,SG)	aufzählest auf
+< aufzählen	V;SBJV;PRS;NOM(3,SG)	aufzähle auf
+< aufzählen	V;SBJV;PST;NOM(1,SG)	aufzählte auf
+< aufzählen	V;SBJV;PST;NOM(2,PL)	aufzähltet auf
+< aufzählen	V;SBJV;PST;NOM(2,SG)	aufzähltest auf
+< aufzählen	V;SBJV;PST;NOM(3,PL)	aufzählten auf
+< aufzählen	V;SBJV;PST;NOM(3,SG)	aufzählte auf
+---
+> aufzählen	V;SBJV;PRS;NOM(1,PL)	zählen auf
+> aufzählen	V;SBJV;PRS;NOM(2,SG)	zählest auf
+> aufzählen	V;SBJV;PRS;NOM(3,SG)	zähle auf
+> aufzählen	V;SBJV;PST;NOM(1,SG)	zählte auf
+> aufzählen	V;SBJV;PST;NOM(2,PL)	zähltet auf
+> aufzählen	V;SBJV;PST;NOM(2,SG)	zähltest auf
+> aufzählen	V;SBJV;PST;NOM(3,PL)	zählten auf
+> aufzählen	V;SBJV;PST;NOM(3,SG)	zählte auf
+3488,3494c3488,3494
+< ausfüllen	V;IMP;NOM(2,PL)	ausfüllt aus
+< ausfüllen	V;IMP;NOM(2,SG)	ausfüll aus
+< ausfüllen	V;IND;PRS;NOM(1,SG)	ausfülle aus
+< ausfüllen	V;IND;PRS;NOM(3,SG)	ausfüllt aus
+< ausfüllen	V;IND;PST;NOM(1,PL)	ausfüllten aus
+< ausfüllen	V;IND;PST;NOM(2,SG)	ausfülltest aus
+< ausfüllen	V;IND;PST;NOM(3,SG)	ausfüllte aus
+---
+> ausfüllen	V;IMP;NOM(2,PL)	füllt aus
+> ausfüllen	V;IMP;NOM(2,SG)	füll aus
+> ausfüllen	V;IND;PRS;NOM(1,SG)	fülle aus
+> ausfüllen	V;IND;PRS;NOM(3,SG)	füllt aus
+> ausfüllen	V;IND;PST;NOM(1,PL)	füllten aus
+> ausfüllen	V;IND;PST;NOM(2,SG)	fülltest aus
+> ausfüllen	V;IND;PST;NOM(3,SG)	füllte aus
+3496,3504c3496,3504
+< ausfüllen	V;SBJV;PRS;NOM(1,PL)	ausfüllen aus
+< ausfüllen	V;SBJV;PRS;NOM(2,PL)	ausfüllet aus
+< ausfüllen	V;SBJV;PRS;NOM(2,SG)	ausfüllest aus
+< ausfüllen	V;SBJV;PRS;NOM(3,SG)	ausfülle aus
+< ausfüllen	V;SBJV;PST;NOM(1,PL)	ausfüllten aus
+< ausfüllen	V;SBJV;PST;NOM(2,PL)	ausfülltet aus
+< ausfüllen	V;SBJV;PST;NOM(2,SG)	ausfülltest aus
+< ausfüllen	V;SBJV;PST;NOM(3,PL)	ausfüllten aus
+< ausfüllen	V;SBJV;PST;NOM(3,SG)	ausfüllte aus
+---
+> ausfüllen	V;SBJV;PRS;NOM(1,PL)	füllen aus
+> ausfüllen	V;SBJV;PRS;NOM(2,PL)	füllet aus
+> ausfüllen	V;SBJV;PRS;NOM(2,SG)	füllest aus
+> ausfüllen	V;SBJV;PRS;NOM(3,SG)	fülle aus
+> ausfüllen	V;SBJV;PST;NOM(1,PL)	füllten aus
+> ausfüllen	V;SBJV;PST;NOM(2,PL)	fülltet aus
+> ausfüllen	V;SBJV;PST;NOM(2,SG)	fülltest aus
+> ausfüllen	V;SBJV;PST;NOM(3,PL)	füllten aus
+> ausfüllen	V;SBJV;PST;NOM(3,SG)	füllte aus
+3507,3521c3507,3521
+< ausscheiden	V;IMP;NOM(2,PL)	auscheidet aus
+< ausscheiden	V;IMP;NOM(2,SG)	auscheide aus
+< ausscheiden	V;IND;PRS;NOM(1,SG)	auscheide aus
+< ausscheiden	V;IND;PRS;NOM(2,PL)	auscheidet aus
+< ausscheiden	V;IND;PRS;NOM(2,SG)	auscheidest aus
+< ausscheiden	V;IND;PRS;NOM(3,SG)	auscheidet aus
+< ausscheiden	V;IND;PST;NOM(2,PL)	auschiedet aus
+< ausscheiden	V;IND;PST;NOM(2,SG)	auschiedest aus
+< ausscheiden	V;SBJV;PRS;NOM(1,PL)	auscheiden aus
+< ausscheiden	V;SBJV;PRS;NOM(2,PL)	auscheidet aus
+< ausscheiden	V;SBJV;PRS;NOM(2,SG)	auscheidest aus
+< ausscheiden	V;SBJV;PRS;NOM(3,PL)	auscheiden aus
+< ausscheiden	V;SBJV;PST;NOM(1,PL)	auschieden aus
+< ausscheiden	V;SBJV;PST;NOM(2,SG)	auschiedest aus
+< ausscheiden	V;SBJV;PST;NOM(3,SG)	auschiede aus
+---
+> ausscheiden	V;IMP;NOM(2,PL)	scheidet aus
+> ausscheiden	V;IMP;NOM(2,SG)	scheide aus
+> ausscheiden	V;IND;PRS;NOM(1,SG)	scheide aus
+> ausscheiden	V;IND;PRS;NOM(2,PL)	scheidet aus
+> ausscheiden	V;IND;PRS;NOM(2,SG)	scheidest aus
+> ausscheiden	V;IND;PRS;NOM(3,SG)	scheidet aus
+> ausscheiden	V;IND;PST;NOM(2,PL)	schiedet aus
+> ausscheiden	V;IND;PST;NOM(2,SG)	schiedest aus
+> ausscheiden	V;SBJV;PRS;NOM(1,PL)	scheiden aus
+> ausscheiden	V;SBJV;PRS;NOM(2,PL)	scheidet aus
+> ausscheiden	V;SBJV;PRS;NOM(2,SG)	scheidest aus
+> ausscheiden	V;SBJV;PRS;NOM(3,PL)	scheiden aus
+> ausscheiden	V;SBJV;PST;NOM(1,PL)	schieden aus
+> ausscheiden	V;SBJV;PST;NOM(2,SG)	schiedest aus
+> ausscheiden	V;SBJV;PST;NOM(3,SG)	schiede aus
+3575c3575
+< bangen	V.PTCP;PST	bangt
+---
+> bangen	V.PTCP;PST	gebangt
+3593c3593
+< beamen	V.PTCP;PST	beamt
+---
+> beamen	V.PTCP;PST	gebeamt
+3730,3731c3730,3731
+< beilegen	V;IMP;NOM(2,SG)	beileg bei
+< beilegen	V;IND;PRS;NOM(1,PL)	beilegen bei
+---
+> beilegen	V;IMP;NOM(2,SG)	leg bei
+> beilegen	V;IND;PRS;NOM(1,PL)	legen bei
+3733c3733
+< beilegen	V;IND;PRS;NOM(3,PL)	beilegen bei
+---
+> beilegen	V;IND;PRS;NOM(3,PL)	legen bei
+4096c4096
+< bieren	V.PTCP;PST	biert
+---
+> bieren	V.PTCP;PST	gebiert
+4114c4114
+< blaken	V.PTCP;PST	blakt
+---
+> blaken	V.PTCP;PST	geblakt
+4129c4129
+< bleichen	V.PTCP;PST	blichen
+---
+> bleichen	V.PTCP;PST	geblichen
+4148c4148
+< blenden	V.PTCP;PST	blendet
+---
+> blenden	V.PTCP;PST	geblendet
+4184c4184
+< brennen	V.PTCP;PST	brannt
+---
+> brennen	V.PTCP;PST	gebrannt
+4218c4218
+< buhen	V.PTCP;PST	buht
+---
+> buhen	V.PTCP;PST	gebuht
+4235c4235
+< bürsten	V.PTCP;PST	bürstet
+---
+> bürsten	V.PTCP;PST	gebürstet
+4498c4498
+< dopen	V.PTCP;PST	dopt
+---
+> dopen	V.PTCP;PST	gedopt
+4533c4533
+< driften	V.PTCP;PST	driftet
+---
+> driften	V.PTCP;PST	gedriftet
+4551c4551
+< drohen	V.PTCP;PST	droht
+---
+> drohen	V.PTCP;PST	gedroht
+4567c4567
+< duften	V.PTCP;PST	duftet
+---
+> duften	V.PTCP;PST	geduftet
+4586c4586
+< dämpfen	V.PTCP;PST	dämpft
+---
+> dämpfen	V.PTCP;PST	gedämpft
+4604c4604
+< dünken	V.PTCP;PST	deucht
+---
+> dünken	V.PTCP;PST	gedeucht
+4639c4639
+< eiern	V.PTCP;PST	eeiert
+---
+> eiern	V.PTCP;PST	geeiert
+4658,4674c4658,4674
+< einflößen	V;IMP;NOM(2,PL)	einflößt ein
+< einflößen	V;IMP;NOM(2,SG)	einflöß ein
+< einflößen	V;IND;PRS;NOM(1,SG)	einflöße ein
+< einflößen	V;IND;PRS;NOM(2,PL)	einflößt ein
+< einflößen	V;IND;PRS;NOM(2,SG)	einflößt ein
+< einflößen	V;IND;PST;NOM(1,SG)	einflößte ein
+< einflößen	V;IND;PST;NOM(2,PL)	einflößtet ein
+< einflößen	V;IND;PST;NOM(2,SG)	einflößtest ein
+< einflößen	V;IND;PST;NOM(3,SG)	einflößte ein
+< einflößen	V;SBJV;PRS;NOM(1,PL)	einflößen ein
+< einflößen	V;SBJV;PRS;NOM(1,SG)	einflöße ein
+< einflößen	V;SBJV;PRS;NOM(2,SG)	einflößest ein
+< einflößen	V;SBJV;PRS;NOM(3,PL)	einflößen ein
+< einflößen	V;SBJV;PRS;NOM(3,SG)	einflöße ein
+< einflößen	V;SBJV;PST;NOM(1,SG)	einflößte ein
+< einflößen	V;SBJV;PST;NOM(3,PL)	einflößten ein
+< einflößen	V;SBJV;PST;NOM(3,SG)	einflößte ein
+---
+> einflößen	V;IMP;NOM(2,PL)	flößt ein
+> einflößen	V;IMP;NOM(2,SG)	flöß ein
+> einflößen	V;IND;PRS;NOM(1,SG)	flöße ein
+> einflößen	V;IND;PRS;NOM(2,PL)	flößt ein
+> einflößen	V;IND;PRS;NOM(2,SG)	flößt ein
+> einflößen	V;IND;PST;NOM(1,SG)	flößte ein
+> einflößen	V;IND;PST;NOM(2,PL)	flößtet ein
+> einflößen	V;IND;PST;NOM(2,SG)	flößtest ein
+> einflößen	V;IND;PST;NOM(3,SG)	flößte ein
+> einflößen	V;SBJV;PRS;NOM(1,PL)	flößen ein
+> einflößen	V;SBJV;PRS;NOM(1,SG)	flöße ein
+> einflößen	V;SBJV;PRS;NOM(2,SG)	flößest ein
+> einflößen	V;SBJV;PRS;NOM(3,PL)	flößen ein
+> einflößen	V;SBJV;PRS;NOM(3,SG)	flöße ein
+> einflößen	V;SBJV;PST;NOM(1,SG)	flößte ein
+> einflößen	V;SBJV;PST;NOM(3,PL)	flößten ein
+> einflößen	V;SBJV;PST;NOM(3,SG)	flößte ein
+4677,4680c4677,4680
+< eingehen	V;IMP;NOM(2,PL)	eingeht ein
+< eingehen	V;IMP;NOM(2,SG)	eingeh ein
+< eingehen	V;IND;PRS;NOM(1,SG)	eingehe ein
+< eingehen	V;IND;PRS;NOM(3,PL)	ehen ein
+---
+> eingehen	V;IMP;NOM(2,PL)	geht ein
+> eingehen	V;IMP;NOM(2,SG)	geh ein
+> eingehen	V;IND;PRS;NOM(1,SG)	gehe ein
+> eingehen	V;IND;PRS;NOM(3,PL)	gehen ein
+4685,4690c4685,4690
+< eingehen	V;SBJV;PRS;NOM(1,PL)	ehen ein
+< eingehen	V;SBJV;PRS;NOM(1,SG)	eingehe ein
+< eingehen	V;SBJV;PRS;NOM(2,PL)	eingehet ein
+< eingehen	V;SBJV;PRS;NOM(2,SG)	ehest ein
+< eingehen	V;SBJV;PRS;NOM(3,PL)	ehen ein
+< eingehen	V;SBJV;PRS;NOM(3,SG)	eingehe ein
+---
+> eingehen	V;SBJV;PRS;NOM(1,PL)	gehen ein
+> eingehen	V;SBJV;PRS;NOM(1,SG)	gehe ein
+> eingehen	V;SBJV;PRS;NOM(2,PL)	gehet ein
+> eingehen	V;SBJV;PRS;NOM(2,SG)	gehest ein
+> eingehen	V;SBJV;PRS;NOM(3,PL)	gehen ein
+> eingehen	V;SBJV;PRS;NOM(3,SG)	gehe ein
+4695,4700c4695,4700
+< einordnen	V;IMP;NOM(2,SG)	einordne ein
+< einordnen	V;IND;PRS;NOM(1,PL)	einordnen ein
+< einordnen	V;IND;PRS;NOM(1,SG)	einordne ein
+< einordnen	V;IND;PRS;NOM(3,SG)	einordnet ein
+< einordnen	V;IND;PST;NOM(2,PL)	einordnetet ein
+< einordnen	V;IND;PST;NOM(2,SG)	einordnetest ein
+---
+> einordnen	V;IMP;NOM(2,SG)	ordne ein
+> einordnen	V;IND;PRS;NOM(1,PL)	ordnen ein
+> einordnen	V;IND;PRS;NOM(1,SG)	ordne ein
+> einordnen	V;IND;PRS;NOM(3,SG)	ordnet ein
+> einordnen	V;IND;PST;NOM(2,PL)	ordnetet ein
+> einordnen	V;IND;PST;NOM(2,SG)	ordnetest ein
+4702c4702
+< einordnen	V;IND;PST;NOM(3,SG)	einordnete ein
+---
+> einordnen	V;IND;PST;NOM(3,SG)	ordnete ein
+4704,4708c4704,4708
+< einordnen	V;SBJV;PRS;NOM(1,SG)	einordne ein
+< einordnen	V;SBJV;PRS;NOM(2,PL)	einordnet ein
+< einordnen	V;SBJV;PRS;NOM(2,SG)	einordnest ein
+< einordnen	V;SBJV;PST;NOM(2,PL)	einordnetet ein
+< einordnen	V;SBJV;PST;NOM(2,SG)	einordnetest ein
+---
+> einordnen	V;SBJV;PRS;NOM(1,SG)	ordne ein
+> einordnen	V;SBJV;PRS;NOM(2,PL)	ordnet ein
+> einordnen	V;SBJV;PRS;NOM(2,SG)	ordnest ein
+> einordnen	V;SBJV;PST;NOM(2,PL)	ordnetet ein
+> einordnen	V;SBJV;PST;NOM(2,SG)	ordnetest ein
+4710c4710
+< einordnen	V;SBJV;PST;NOM(3,SG)	einordnete ein
+---
+> einordnen	V;SBJV;PST;NOM(3,SG)	ordnete ein
+4713,4719c4713,4719
+< einräumen	V;IMP;NOM(2,PL)	einräumt ein
+< einräumen	V;IND;PRS;NOM(1,SG)	einräume
+< einräumen	V;IND;PRS;NOM(2,PL)	einräumt ein
+< einräumen	V;IND;PRS;NOM(2,SG)	einräumst
+< einräumen	V;IND;PRS;NOM(3,SG)	einräumt ein
+< einräumen	V;IND;PST;NOM(2,SG)	einräumtest ein
+< einräumen	V;IND;PST;NOM(3,SG)	einräumte
+---
+> einräumen	V;IMP;NOM(2,PL)	räumt ein
+> einräumen	V;IND;PRS;NOM(1,SG)	räume ein
+> einräumen	V;IND;PRS;NOM(2,PL)	räumt ein
+> einräumen	V;IND;PRS;NOM(2,SG)	räumst ein
+> einräumen	V;IND;PRS;NOM(3,SG)	räumt ein
+> einräumen	V;IND;PST;NOM(2,SG)	räumtest ein
+> einräumen	V;IND;PST;NOM(3,SG)	räumte ein
+4721,4727c4721,4727
+< einräumen	V;SBJV;PRS;NOM(2,PL)	einräumet ein
+< einräumen	V;SBJV;PRS;NOM(3,PL)	einräumen
+< einräumen	V;SBJV;PRS;NOM(3,SG)	einräume ein
+< einräumen	V;SBJV;PST;NOM(1,PL)	einräumten ein
+< einräumen	V;SBJV;PST;NOM(2,PL)	einräumtet
+< einräumen	V;SBJV;PST;NOM(2,SG)	einräumtest ein
+< einräumen	V;SBJV;PST;NOM(3,SG)	einräumte ein
+---
+> einräumen	V;SBJV;PRS;NOM(2,PL)	räumet ein
+> einräumen	V;SBJV;PRS;NOM(3,PL)	räumen ein
+> einräumen	V;SBJV;PRS;NOM(3,SG)	räume ein
+> einräumen	V;SBJV;PST;NOM(1,PL)	räumten ein
+> einräumen	V;SBJV;PST;NOM(2,PL)	räumtet ein
+> einräumen	V;SBJV;PST;NOM(2,SG)	räumtest ein
+> einräumen	V;SBJV;PST;NOM(3,SG)	räumte ein
+4729,4744c4729,4744
+< einstellen	V;IMP;NOM(2,PL)	einstellt ein
+< einstellen	V;IMP;NOM(2,SG)	einstell ein
+< einstellen	V;IND;PRS;NOM(1,PL)	einstellen ein
+< einstellen	V;IND;PRS;NOM(2,SG)	einstellst ein
+< einstellen	V;IND;PRS;NOM(3,PL)	einstellen ein
+< einstellen	V;IND;PRS;NOM(3,SG)	einstellt ein
+< einstellen	V;IND;PST;NOM(1,PL)	einstellten ein
+< einstellen	V;IND;PST;NOM(1,SG)	einstellte ein
+< einstellen	V;IND;PST;NOM(2,PL)	einstelltet ein
+< einstellen	V;IND;PST;NOM(3,SG)	einstellte ein
+< einstellen	V;SBJV;PRS;NOM(2,PL)	einstellet ein
+< einstellen	V;SBJV;PRS;NOM(2,SG)	einstellest ein
+< einstellen	V;SBJV;PRS;NOM(3,PL)	einstellen ein
+< einstellen	V;SBJV;PST;NOM(1,PL)	einstellten ein
+< einstellen	V;SBJV;PST;NOM(2,PL)	einstelltet ein
+< einstellen	V;SBJV;PST;NOM(3,SG)	einstellte ein
+---
+> einstellen	V;IMP;NOM(2,PL)	stellt ein
+> einstellen	V;IMP;NOM(2,SG)	stell ein
+> einstellen	V;IND;PRS;NOM(1,PL)	stellen ein
+> einstellen	V;IND;PRS;NOM(2,SG)	stellst ein
+> einstellen	V;IND;PRS;NOM(3,PL)	stellen ein
+> einstellen	V;IND;PRS;NOM(3,SG)	stellt ein
+> einstellen	V;IND;PST;NOM(1,PL)	stellten ein
+> einstellen	V;IND;PST;NOM(1,SG)	stellte ein
+> einstellen	V;IND;PST;NOM(2,PL)	stelltet ein
+> einstellen	V;IND;PST;NOM(3,SG)	stellte ein
+> einstellen	V;SBJV;PRS;NOM(2,PL)	stellet ein
+> einstellen	V;SBJV;PRS;NOM(2,SG)	stellest ein
+> einstellen	V;SBJV;PRS;NOM(3,PL)	stellen ein
+> einstellen	V;SBJV;PST;NOM(1,PL)	stellten ein
+> einstellen	V;SBJV;PST;NOM(2,PL)	stelltet ein
+> einstellen	V;SBJV;PST;NOM(3,SG)	stellte ein
+4746,4753c4746,4753
+< einteilen	V;IMP;NOM(2,PL)	eilt ein
+< einteilen	V;IMP;NOM(2,SG)	einteil ein
+< einteilen	V;IND;PRS;NOM(1,PL)	eilen ein
+< einteilen	V;IND;PRS;NOM(1,SG)	einteile ein
+< einteilen	V;IND;PRS;NOM(2,PL)	eilt ein
+< einteilen	V;IND;PRS;NOM(2,SG)	eilst ein
+< einteilen	V;IND;PRS;NOM(3,PL)	eilen ein
+< einteilen	V;IND;PST;NOM(1,SG)	eilte ein
+---
+> einteilen	V;IMP;NOM(2,PL)	teilt ein
+> einteilen	V;IMP;NOM(2,SG)	teil ein
+> einteilen	V;IND;PRS;NOM(1,PL)	teilen ein
+> einteilen	V;IND;PRS;NOM(1,SG)	teile ein
+> einteilen	V;IND;PRS;NOM(2,PL)	teilt ein
+> einteilen	V;IND;PRS;NOM(2,SG)	teilst ein
+> einteilen	V;IND;PRS;NOM(3,PL)	teilen ein
+> einteilen	V;IND;PST;NOM(1,SG)	teilte ein
+4755,4768c4755,4768
+< einteilen	V;SBJV;PRS;NOM(1,PL)	eilen ein
+< einteilen	V;SBJV;PRS;NOM(1,SG)	einteile ein
+< einteilen	V;SBJV;PRS;NOM(2,SG)	eilest ein
+< einteilen	V;SBJV;PRS;NOM(3,PL)	eilen ein
+< einteilen	V;SBJV;PRS;NOM(3,SG)	einteile ein
+< einteilen	V;SBJV;PST;NOM(1,PL)	eilten ein
+< einteilen	V;SBJV;PST;NOM(2,PL)	eiltet ein
+< einteilen	V;SBJV;PST;NOM(3,SG)	eilte ein
+< einziehen	V;IMP;NOM(2,PL)	einzieht ein
+< einziehen	V;IMP;NOM(2,SG)	einzieh ein
+< einziehen	V;IND;PRS;NOM(1,PL)	einziehen ein
+< einziehen	V;IND;PRS;NOM(2,PL)	einzieht ein
+< einziehen	V;IND;PRS;NOM(3,PL)	einziehen ein
+< einziehen	V;IND;PST;NOM(1,SG)	einzog ein
+---
+> einteilen	V;SBJV;PRS;NOM(1,PL)	teilen ein
+> einteilen	V;SBJV;PRS;NOM(1,SG)	teile ein
+> einteilen	V;SBJV;PRS;NOM(2,SG)	teilest ein
+> einteilen	V;SBJV;PRS;NOM(3,PL)	teilen ein
+> einteilen	V;SBJV;PRS;NOM(3,SG)	teile ein
+> einteilen	V;SBJV;PST;NOM(1,PL)	teilten ein
+> einteilen	V;SBJV;PST;NOM(2,PL)	teiltet ein
+> einteilen	V;SBJV;PST;NOM(3,SG)	teilte ein
+> einziehen	V;IMP;NOM(2,PL)	zieht ein
+> einziehen	V;IMP;NOM(2,SG)	zieh ein
+> einziehen	V;IND;PRS;NOM(1,PL)	ziehen ein
+> einziehen	V;IND;PRS;NOM(2,PL)	zieht ein
+> einziehen	V;IND;PRS;NOM(3,PL)	ziehen ein
+> einziehen	V;IND;PST;NOM(1,SG)	zog ein
+4770c4770
+< einziehen	V;IND;PST;NOM(3,PL)	en ein
+---
+> einziehen	V;IND;PST;NOM(3,PL)	zogen ein
+4772,4777c4772,4777
+< einziehen	V;SBJV;PRS;NOM(1,PL)	einziehen ein
+< einziehen	V;SBJV;PRS;NOM(1,SG)	einziehe ein
+< einziehen	V;SBJV;PRS;NOM(2,SG)	einziehest ein
+< einziehen	V;SBJV;PRS;NOM(3,SG)	einziehe ein
+< einziehen	V;SBJV;PST;NOM(1,PL)	en ein
+< einziehen	V;SBJV;PST;NOM(1,SG)	einzöge ein
+---
+> einziehen	V;SBJV;PRS;NOM(1,PL)	ziehen ein
+> einziehen	V;SBJV;PRS;NOM(1,SG)	ziehe ein
+> einziehen	V;SBJV;PRS;NOM(2,SG)	ziehest ein
+> einziehen	V;SBJV;PRS;NOM(3,SG)	ziehe ein
+> einziehen	V;SBJV;PST;NOM(1,PL)	zögen ein
+> einziehen	V;SBJV;PST;NOM(1,SG)	zöge ein
+4779,4780c4779,4780
+< einziehen	V;SBJV;PST;NOM(3,PL)	en ein
+< einziehen	V;SBJV;PST;NOM(3,SG)	einzöge ein
+---
+> einziehen	V;SBJV;PST;NOM(3,PL)	zögen ein
+> einziehen	V;SBJV;PST;NOM(3,SG)	zöge ein
+4782c4782
+< ekeln	V.PTCP;PST	eekelt
+---
+> ekeln	V.PTCP;PST	geekelt
+5269c5269
+< flirten	V.PTCP;PST	flirtet
+---
+> flirten	V.PTCP;PST	geflirtet
+5286c5286
+< flutschen	V.PTCP;PST	flutscht
+---
+> flutschen	V.PTCP;PST	geflutscht
+5341c5341
+< frühstücken	V.PTCP;PST	frühstückt
+---
+> frühstücken	V.PTCP;PST	gefrühstückt
+5377c5377
+< fügen	V.PTCP;PST	fügt
+---
+> fügen	V.PTCP;PST	gefügt
+5725,5730c5725,5730
+< haken	V.PTCP;PST	hakt
+< haken	V;IMP;NOM(2,PL)	hakt ab
+< haken	V;IND;PRS;NOM(1,PL)	haken ab
+< haken	V;IND;PRS;NOM(1,SG)	hake ab
+< haken	V;IND;PRS;NOM(2,SG)	hakst ab
+< haken	V;IND;PRS;NOM(3,PL)	haken ab
+---
+> haken	V.PTCP;PST	gehakt
+> haken	V;IMP;NOM(2,PL)	hakt
+> haken	V;IND;PRS;NOM(1,PL)	haken
+> haken	V;IND;PRS;NOM(1,SG)	hake
+> haken	V;IND;PRS;NOM(2,SG)	hakst
+> haken	V;IND;PRS;NOM(3,PL)	haken
+5734c5734
+< haken	V;IND;PST;NOM(3,PL)	hakten ab
+---
+> haken	V;IND;PST;NOM(3,PL)	hakten
+5736c5736
+< haken	V;SBJV;PRS;NOM(2,PL)	haket ab
+---
+> haken	V;SBJV;PRS;NOM(2,PL)	haket
+5739c5739
+< haken	V;SBJV;PST;NOM(2,PL)	haktet ab
+---
+> haken	V;SBJV;PST;NOM(2,PL)	haktet
+5741,5742c5741,5742
+< haken	V;SBJV;PST;NOM(3,SG)	hakte ab
+< hampeln	V.PTCP;PST	hampelt
+---
+> haken	V;SBJV;PST;NOM(3,SG)	hakte
+> hampeln	V.PTCP;PST	gehampelt
+5777c5777
+< henken	V.PTCP;PST	henkt
+---
+> henken	V.PTCP;PST	gehenkt
+5795c5795
+< hereinkommen	V;IMP;NOM(2,SG)	herein
+---
+> hereinkommen	V;IMP;NOM(2,SG)	komm herein
+5799,5800c5799,5800
+< hereinkommen	V;IND;PST;NOM(1,SG)	herein
+< hereinkommen	V;IND;PST;NOM(2,PL)	herein
+---
+> hereinkommen	V;IND;PST;NOM(1,SG)	kam herein
+> hereinkommen	V;IND;PST;NOM(2,PL)	kamt herein
+5812c5812
+< heylen	V.PTCP;PST	heylt
+---
+> heylen	V.PTCP;PST	geheylt
+5830c5830
+< holpern	V.PTCP;PST	holpert
+---
+> holpern	V.PTCP;PST	geholpert
+5865c5865
+< horchen	V.PTCP;PST	horcht
+---
+> horchen	V.PTCP;PST	gehorcht
+5901c5901
+< hupen	V.PTCP;PST	hupt
+---
+> hupen	V.PTCP;PST	gehupt
+5917c5917
+< husten	V.PTCP;PST	hustet
+---
+> husten	V.PTCP;PST	gehustet
+5971,5979c5971,5979
+< in Abrede stellen	V.PTCP;PRS	in Abredestellend
+< in Abrede stellen	V;IMP;NOM(2,PL)	in Abrede
+< in Abrede stellen	V;IMP;NOM(2,SG)	in Abrede
+< in Abrede stellen	V;IND;PRS;NOM(1,SG)	in Abrede
+< in Abrede stellen	V;IND;PRS;NOM(2,PL)	in Abrede
+< in Abrede stellen	V;IND;PRS;NOM(2,SG)	in Abrede
+< in Abrede stellen	V;IND;PRS;NOM(3,PL)	in Abrede
+< in Abrede stellen	V;IND;PST;NOM(1,SG)	in Abrede
+< in Abrede stellen	V;IND;PST;NOM(2,PL)	in Abrede
+---
+> in Abrede stellen	V.PTCP;PRS	Abredestellend
+> in Abrede stellen	V;IMP;NOM(2,PL)	stellt in Abrede
+> in Abrede stellen	V;IMP;NOM(2,SG)	stell in Abrede
+> in Abrede stellen	V;IND;PRS;NOM(1,SG)	stelle in Abrede
+> in Abrede stellen	V;IND;PRS;NOM(2,PL)	stellt in Abrede
+> in Abrede stellen	V;IND;PRS;NOM(2,SG)	stellst in Abrede
+> in Abrede stellen	V;IND;PRS;NOM(3,PL)	stellen in Abrede
+> in Abrede stellen	V;IND;PST;NOM(1,SG)	stellte in Abrede
+> in Abrede stellen	V;IND;PST;NOM(2,PL)	stelltet in Abrede
+5981,5985c5981,5985
+< in Abrede stellen	V;IND;PST;NOM(3,SG)	in Abrede
+< in Abrede stellen	V;NFIN	in Abredestellen
+< in Abrede stellen	V;SBJV;PRS;NOM(1,PL)	in Abrede
+< in Abrede stellen	V;SBJV;PRS;NOM(2,SG)	in Abrede
+< in Abrede stellen	V;SBJV;PST;NOM(1,SG)	in Abrede
+---
+> in Abrede stellen	V;IND;PST;NOM(3,SG)	stellte in Abrede
+> in Abrede stellen	V;NFIN	Abredestellen
+> in Abrede stellen	V;SBJV;PRS;NOM(1,PL)	stellen in Abrede
+> in Abrede stellen	V;SBJV;PRS;NOM(2,SG)	stellest in Abrede
+> in Abrede stellen	V;SBJV;PST;NOM(1,SG)	stellte in Abrede
+5987c5987
+< in Abrede stellen	V;SBJV;PST;NOM(3,PL)	in Abrede
+---
+> in Abrede stellen	V;SBJV;PST;NOM(3,PL)	stellten in Abrede
+6093c6093
+< jodeln	V.PTCP;PST	jodelt
+---
+> jodeln	V.PTCP;PST	gejodelt
+6127c6127
+< jähren	V.PTCP;PST	jährt
+---
+> jähren	V.PTCP;PST	gejährt
+6160c6160
+< kappen	V.PTCP;PST	kappt
+---
+> kappen	V.PTCP;PST	gekappt
+6246c6246
+< kauen	V.PTCP;PST	kaut
+---
+> kauen	V.PTCP;PST	gekaut
+6353c6353
+< knautschen	V.PTCP;PST	knautscht
+---
+> knautschen	V.PTCP;PST	geknautscht
+6514c6514
+< krakeln	V.PTCP;PST	krakelt
+---
+> krakeln	V.PTCP;PST	gekrakelt
+6566c6566
+< lehren	V.PTCP;PST	lehrt
+---
+> lehren	V.PTCP;PST	gelehrt
+6590c6590
+< leiden	V;IND;PST;NOM(2,SG)	leidetest
+---
+> leiden	V;IND;PST;NOM(2,SG)	littest
+6592c6592
+< leiden	V;IND;PST;NOM(3,SG)	leidete
+---
+> leiden	V;IND;PST;NOM(3,SG)	litt
+6597,6598c6597,6598
+< leiden	V;SBJV;PST;NOM(2,PL)	leidetet
+< leiden	V;SBJV;PST;NOM(3,SG)	leidete
+---
+> leiden	V;SBJV;PST;NOM(2,PL)	littet
+> leiden	V;SBJV;PST;NOM(3,SG)	litte
+6618c6618
+< loben	V.PTCP;PST	lobt
+---
+> loben	V.PTCP;PST	gelobt
+6652c6652
+< läppern	V.PTCP;PST	läppert
+---
+> läppern	V.PTCP;PST	geläppert
+6687c6687
+< malen	V.PTCP;PST	malt
+---
+> malen	V.PTCP;PST	gemalt
+6721c6721
+< mangeln	V.PTCP;PST	mangelt
+---
+> mangeln	V.PTCP;PST	gemangelt
+6805c6805
+< meckern	V.PTCP;PST	meckert
+---
+> meckern	V.PTCP;PST	gemeckert
+6856c6856
+< mildern	V.PTCP;PST	mildert
+---
+> mildern	V.PTCP;PST	gemildert
+6874c6874
+< mimen	V.PTCP;PST	mimt
+---
+> mimen	V.PTCP;PST	gemimt
+6945c6945
+< münden	V.PTCP;PST	mündet
+---
+> münden	V.PTCP;PST	gemündet
+7070c7070
+< paaren	V.PTCP;PST	paart
+---
+> paaren	V.PTCP;PST	gepaart
+7189c7189
+< pfropfen	V.PTCP;PST	pfropft
+---
+> pfropfen	V.PTCP;PST	gepfropft
+7205c7205
+< picheln	V.PTCP;PST	pichelt
+---
+> picheln	V.PTCP;PST	gepichelt
+7240c7240
+< pissen	V.PTCP;PST	pisst
+---
+> pissen	V.PTCP;PST	gepisst
+7275c7275
+< platzen	V.PTCP;PST	platzt
+---
+> platzen	V.PTCP;PST	geplatzt
+7311c7311
+< preisgeben	V;IMP;NOM(2,SG)	preis
+---
+> preisgeben	V;IMP;NOM(2,SG)	gib preis
+7314c7314
+< preisgeben	V;IND;PRS;NOM(3,SG)	preis
+---
+> preisgeben	V;IND;PRS;NOM(3,SG)	gibt preis
+7316,7317c7316,7317
+< preisgeben	V;IND;PST;NOM(1,SG)	preis
+< preisgeben	V;IND;PST;NOM(2,PL)	preis
+---
+> preisgeben	V;IND;PST;NOM(1,SG)	gab preis
+> preisgeben	V;IND;PST;NOM(2,PL)	gabt preis
+7551c7551
+< reizen	V.PTCP;PST	reizt
+---
+> reizen	V.PTCP;PST	gereizt
+7658c7658
+< ritzen	V.PTCP;PST	ritzt
+---
+> ritzen	V.PTCP;PST	geritzt
+7675c7675
+< robben	V.PTCP;PST	robbt
+---
+> robben	V.PTCP;PST	gerobbt
+7727c7727
+< räumen	V.PTCP;PST	räumt
+---
+> räumen	V.PTCP;PST	geräumt
+7730c7730
+< räumen	V;IND;PRS;NOM(3,SG)	räumt ein
+---
+> räumen	V;IND;PRS;NOM(3,SG)	räumt
+7739c7739
+< räumen	V;SBJV;PST;NOM(1,PL)	räumten ein
+---
+> räumen	V;SBJV;PST;NOM(1,PL)	räumten
+7741c7741
+< räumen	V;SBJV;PST;NOM(2,SG)	räumtest ein
+---
+> räumen	V;SBJV;PST;NOM(2,SG)	räumtest
+7814c7814
+< schaufeln	V.PTCP;PST	schaufelt
+---
+> schaufeln	V.PTCP;PST	geschaufelt
+7866c7866
+< schießen	V.PTCP;PST	schossen
+---
+> schießen	V.PTCP;PST	geschossen
+7885c7885
+< schlachten	V.PTCP;PST	schlachtet
+---
+> schlachten	V.PTCP;PST	geschlachtet
+7903c7903
+< schlafwandeln	V.PTCP;PST	schlafwandelt
+---
+> schlafwandeln	V.PTCP;PST	geschlafwandelt
+7921c7921
+< schleimen	V.PTCP;PST	schleimt
+---
+> schleimen	V.PTCP;PST	geschleimt
+7937c7937
+< schlendern	V.PTCP;PST	schlendert
+---
+> schlendern	V.PTCP;PST	geschlendert
+7973c7973
+< schlucken	V.PTCP;PST	schluckt
+---
+> schlucken	V.PTCP;PST	geschluckt
+8007c8007
+< schlummern	V.PTCP;PST	schlummert
+---
+> schlummern	V.PTCP;PST	geschlummert
+8024c8024
+< schmuggeln	V.PTCP;PST	schmuggelt
+---
+> schmuggeln	V.PTCP;PST	geschmuggelt
+8094c8094
+< schrauben	V.PTCP;PST	schraubt
+---
+> schrauben	V.PTCP;PST	geschraubt
+8111c8111
+< schwindeln	V.PTCP;PST	schwindelt
+---
+> schwindeln	V.PTCP;PST	geschwindelt
+8129c8129
+< schwätzen	V.PTCP;PST	schwätzt
+---
+> schwätzen	V.PTCP;PST	geschwätzt
+8182c8182
+< sonnen	V.PTCP;PST	sonnt
+---
+> sonnen	V.PTCP;PST	gesonnt
+8217c8217
+< spreizen	V.PTCP;PST	spreizt
+---
+> spreizen	V.PTCP;PST	gespreizt
+8234c8234
+< spurten	V.PTCP;PST	spurtet
+---
+> spurten	V.PTCP;PST	gespurtet
+8306c8306
+< steuern	V.PTCP;PST	steuert
+---
+> steuern	V.PTCP;PST	gesteuert
+8340c8340
+< stippen	V.PTCP;PST	stippt
+---
+> stippen	V.PTCP;PST	gestippt
+8376c8376
+< streicheln	V.PTCP;PST	streichelt
+---
+> streicheln	V.PTCP;PST	gestreichelt
+8427c8427
+< säubern	V.PTCP;PST	säubert
+---
+> säubern	V.PTCP;PST	gesäubert
+9521c9521
+< wallfahren	V.PTCP;PST	wallfahrt
+---
+> wallfahren	V.PTCP;PST	gewallfahrt
+9556c9556
+< weihen	V.PTCP;PST	weiht
+---
+> weihen	V.PTCP;PST	geweiht
+9574c9574
+< welken	V.PTCP;PST	welkt
+---
+> welken	V.PTCP;PST	gewelkt
+9626c9626
+< wuchern	V.PTCP;PST	wuchert
+---
+> wuchern	V.PTCP;PST	gewuchert
+9731c9731
+< zirpen	V.PTCP;PST	zirpt
+---
+> zirpen	V.PTCP;PST	gezirpt
+9748,9754c9748,9754
+< zubereiten	V;IND;PRS;NOM(1,PL)	zubereiten zu
+< zubereiten	V;IND;PRS;NOM(2,SG)	zubereitest zu
+< zubereiten	V;IND;PRS;NOM(3,PL)	zubereiten zu
+< zubereiten	V;IND;PST;NOM(1,PL)	zubereiteten zu
+< zubereiten	V;IND;PST;NOM(2,PL)	zubereitetet zu
+< zubereiten	V;IND;PST;NOM(2,SG)	zubereitetest zu
+< zubereiten	V;IND;PST;NOM(3,PL)	zubereiteten zu
+---
+> zubereiten	V;IND;PRS;NOM(1,PL)	bereiten zu
+> zubereiten	V;IND;PRS;NOM(2,SG)	bereitest zu
+> zubereiten	V;IND;PRS;NOM(3,PL)	bereiten zu
+> zubereiten	V;IND;PST;NOM(1,PL)	bereiteten zu
+> zubereiten	V;IND;PST;NOM(2,PL)	bereitetet zu
+> zubereiten	V;IND;PST;NOM(2,SG)	bereitetest zu
+> zubereiten	V;IND;PST;NOM(3,PL)	bereiteten zu
+9756,9763c9756,9763
+< zubereiten	V;SBJV;PRS;NOM(1,PL)	zubereiten zu
+< zubereiten	V;SBJV;PRS;NOM(1,SG)	zubereite zu
+< zubereiten	V;SBJV;PRS;NOM(2,PL)	zubereitet zu
+< zubereiten	V;SBJV;PRS;NOM(2,SG)	zubereitest zu
+< zubereiten	V;SBJV;PRS;NOM(3,PL)	zubereiten zu
+< zubereiten	V;SBJV;PST;NOM(2,PL)	zubereitetet zu
+< zubereiten	V;SBJV;PST;NOM(2,SG)	zubereitetest zu
+< zubereiten	V;SBJV;PST;NOM(3,PL)	zubereiteten zu
+---
+> zubereiten	V;SBJV;PRS;NOM(1,PL)	bereiten zu
+> zubereiten	V;SBJV;PRS;NOM(1,SG)	bereite zu
+> zubereiten	V;SBJV;PRS;NOM(2,PL)	bereitet zu
+> zubereiten	V;SBJV;PRS;NOM(2,SG)	bereitest zu
+> zubereiten	V;SBJV;PRS;NOM(3,PL)	bereiten zu
+> zubereiten	V;SBJV;PST;NOM(2,PL)	bereitetet zu
+> zubereiten	V;SBJV;PST;NOM(2,SG)	bereitetest zu
+> zubereiten	V;SBJV;PST;NOM(3,PL)	bereiteten zu
+9765,9781c9765,9781
+< zusagen	V;IMP;NOM(2,PL)	zusagt zu
+< zusagen	V;IND;PRS;NOM(1,PL)	zusagen zu
+< zusagen	V;IND;PRS;NOM(1,SG)	zusage zu
+< zusagen	V;IND;PRS;NOM(2,PL)	zusagt zu
+< zusagen	V;IND;PRS;NOM(2,SG)	zusagst zu
+< zusagen	V;IND;PRS;NOM(3,SG)	zusagt zu
+< zusagen	V;IND;PST;NOM(2,PL)	zusagtet zu
+< zusagen	V;IND;PST;NOM(3,PL)	zusagten zu
+< zusagen	V;IND;PST;NOM(3,SG)	zusagte zu
+< zusagen	V;SBJV;PRS;NOM(1,PL)	zusagen zu
+< zusagen	V;SBJV;PRS;NOM(1,SG)	zusage zu
+< zusagen	V;SBJV;PRS;NOM(2,PL)	zusaget zu
+< zusagen	V;SBJV;PRS;NOM(3,PL)	zusagen zu
+< zusagen	V;SBJV;PST;NOM(1,PL)	zusagten zu
+< zusagen	V;SBJV;PST;NOM(2,PL)	zusagtet zu
+< zusagen	V;SBJV;PST;NOM(3,PL)	zusagten zu
+< zusagen	V;SBJV;PST;NOM(3,SG)	zusagte zu
+---
+> zusagen	V;IMP;NOM(2,PL)	sagt zu
+> zusagen	V;IND;PRS;NOM(1,PL)	sagen zu
+> zusagen	V;IND;PRS;NOM(1,SG)	sage zu
+> zusagen	V;IND;PRS;NOM(2,PL)	sagt zu
+> zusagen	V;IND;PRS;NOM(2,SG)	sagst zu
+> zusagen	V;IND;PRS;NOM(3,SG)	sagt zu
+> zusagen	V;IND;PST;NOM(2,PL)	sagtet zu
+> zusagen	V;IND;PST;NOM(3,PL)	sagten zu
+> zusagen	V;IND;PST;NOM(3,SG)	sagte zu
+> zusagen	V;SBJV;PRS;NOM(1,PL)	sagen zu
+> zusagen	V;SBJV;PRS;NOM(1,SG)	sage zu
+> zusagen	V;SBJV;PRS;NOM(2,PL)	saget zu
+> zusagen	V;SBJV;PRS;NOM(3,PL)	sagen zu
+> zusagen	V;SBJV;PST;NOM(1,PL)	sagten zu
+> zusagen	V;SBJV;PST;NOM(2,PL)	sagtet zu
+> zusagen	V;SBJV;PST;NOM(3,PL)	sagten zu
+> zusagen	V;SBJV;PST;NOM(3,SG)	sagte zu
+9817c9817
+< zwängen	V.PTCP;PST	zwängt
+---
+> zwängen	V.PTCP;PST	gezwängt
+9834c9834
+< zögern	V.PTCP;PST	zögert
+---
+> zögern	V.PTCP;PST	gezögert
+9896c9896
+< äussern	V.PTCP;PST	äussert
+---
+> äussern	V.PTCP;PST	geäussert
