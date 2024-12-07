@@ -151,6 +151,7 @@ def prefix_suffix_rules_get(lemma, form):
         if lemma.startswith(p):
             prefix = p
             root = lemma[len(p):] #removes prefix to isolate root
+            #print(f"Prefix: {prefix}, Root: {root}, Lemma: {lemma}") #EDIT
             break
 
     lp,lr,ls,fp,fr,fs = alignprs(root, form) #get six parts, three for in three for out
@@ -161,6 +162,7 @@ def prefix_suffix_rules_get(lemma, form):
     prules = set()
     if prefix:
         prules.add((prefix, fp)) #rule for transforming the prefix
+    
     # Suffix rules
     ins  = lr + ls + ">"
     #stem and suffix of lemma, '>' indicates end
@@ -188,7 +190,9 @@ def prefix_suffix_rules_get(lemma, form):
             prules.add((inp + fr[:i],outp + fr[:i]))
             #inp and outp, plus the form root sliced from the beginning to index i
             prules = {(x[0].replace('_',''), x[1].replace('_','')) for x in prules}
-            #removes underscores from prefix rules by replacing with empty strings'''
+            #removes underscores from prefix rules by replacing with empty strings
+    '''
+    
     return prules, srules
     #returns set of prefix and suffix rules, respectively
 
@@ -220,14 +224,19 @@ def apply_best_rule(lemma, msd, allprules, allsrules):
             bestrule = max(applicablerules, key = lambda x: (x[2]))
             base = base.replace(bestrule[0], bestrule[1])
     '''
+    
     if msd in allprules:
         prefix = next((p for p in SEPARABLE_PREFIXES if base.startswith("<" + p)), "")
         if prefix:
             applicablerules = [(x[0], x[1], y) for x, y in allprules[msd].items() if x[0] == prefix]
             if applicablerules:
                 bestrule = max(applicablerules, key=lambda x: x[2])  # Choose most frequent rule
-                base = base.replace(bestrule[0], bestrule[1], 1)  # Replace prefix
-
+                root = lemma[len(prefix):]  # Remove the original prefix
+                print(f"Original Lemma: {lemma}, Prefix Detected: {prefix}")
+                print(f"Root: {root}") #EDIT
+                lemma = f"{bestrule[1]} {lemma}"  # Add the transformed prefix at the correct position
+                #base = base.replace(bestrule[0], bestrule[1], 1)  # Replace prefix
+    
     base = base.replace('<', '')
     base = base.replace('>', '')
     return base
@@ -288,8 +297,10 @@ def main(argv):
                 prefbias += numleadingsyms(aligned[0],'_') + numleadingsyms(aligned[1],'_')
                 suffbias += numtrailingsyms(aligned[0],'_') + numtrailingsyms(aligned[1],'_')
                 #counts leading/trailing underscores to detect whether the language has prefix or suffix bias
-        allprules = {} #EDIT
-        for l in lines: # Read in lines and extract transformation rules from pairs
+        
+        allprules = {} #EDIT: initializes new dictionary to store prefix rules
+        
+        for l in lines: #read in lines and extract transformation rules from pairs
             lemma, msd, form = l.split(u'\t')
             if prefbias > suffbias:
                 lemma = lemma[::-1]
@@ -305,18 +316,19 @@ def main(argv):
 
             for r in prules:
                 if (r[0],r[1]) in allprules[msd]:
-                    allprules[msd][(r[0],r[1])] = allprules[msd][(r[0],r[1])] + 1
+                    allprules[msd][(r[0],r[1])] += 1
                 else:
                     allprules[msd][(r[0],r[1])] = 1
 
             for r in srules:
                 if (r[0],r[1]) in allsrules[msd]:
-                    allsrules[msd][(r[0],r[1])] = allsrules[msd][(r[0],r[1])] + 1
+                    allsrules[msd][(r[0],r[1])] += 1
                 else:
                     allsrules[msd][(r[0],r[1])] = 1
+        #EDIT print(f"Prefix Rules for MSD {msd}: {allprules.get(msd, {})}")
 
         # Run eval on dev
-        devlines = [line.strip() for line in open(path + lang + ".trn", "r", encoding='utf8') if line != '\n']
+        devlines = [line.strip() for line in open(path + lang + ".dev", "r", encoding='utf8') if line != '\n']
         if TEST:
             devlines = [line.strip() for line in open(path + lang + ".tst", "r", encoding='utf8') if line != '\n']
         numcorrect = 0
