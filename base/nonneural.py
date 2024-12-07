@@ -137,16 +137,30 @@ def alignprs(lemma, form):
     return alemma[0:lspace], alemma[lspace:len(alemma)-tspace], alemma[len(alemma)-tspace:], aform[0:lspace], aform[lspace:len(alemma)-tspace], aform[len(alemma)-tspace:]
     #returns prefix of alemma, stem of alemma, suffix of alemma, prefix of aform, stem of aform, suffix of aform
 
+SEPARABLE_PREFIXES = {"ab", "an", "auf", "aus", "bei", "ein", "mit", "nach", "vor", "weg", "zu"} #EDIT
+#defines list of separable prefixes
 
 def prefix_suffix_rules_get(lemma, form):
     """Extract a number of suffix-change and prefix-change rules
     based on a given example lemma+inflected form."""
     """Analyze how the prefix and suffix change given a lemma and inflected form in order
     to predict forms for other words.""" 
-    lp,lr,ls,fp,fr,fs = alignprs(lemma, form) #get six parts, three for in three for out
+    prefix = ''
+    root = lemma
+    for p in SEPARABLE_PREFIXES:
+        if lemma.startswith(p):
+            prefix = p
+            root = lemma[len(p):] #removes prefix to isolate root
+            break
+
+    lp,lr,ls,fp,fr,fs = alignprs(root, form) #get six parts, three for in three for out
     #lp, lr, ls: lemma prefix, lemma root, lemma suffix
     #fp, fr, fs: form prefix, form root, form suffix
 
+    #Prefix rules
+    prules = set()
+    if prefix:
+        prules.add((prefix, fp)) #rule for transforming the prefix
     # Suffix rules
     ins  = lr + ls + ">"
     #stem and suffix of lemma, '>' indicates end
@@ -161,7 +175,7 @@ def prefix_suffix_rules_get(lemma, form):
     srules = {(x[0].replace('_',''), x[1].replace('_','')) for x in srules}
     #removes underscores from suffix rules by replacing with empty strings
 
-    # Prefix rules
+    '''# Prefix rules
     prules = set()
     if len(lp) >= 0 or len(fp) >= 0:
         #if either the lemma or form has a prefix
@@ -174,8 +188,7 @@ def prefix_suffix_rules_get(lemma, form):
             prules.add((inp + fr[:i],outp + fr[:i]))
             #inp and outp, plus the form root sliced from the beginning to index i
             prules = {(x[0].replace('_',''), x[1].replace('_','')) for x in prules}
-            #removes underscores from prefix rules by replacing with empty strings
-
+            #removes underscores from prefix rules by replacing with empty strings'''
     return prules, srules
     #returns set of prefix and suffix rules, respectively
 
@@ -200,12 +213,20 @@ def apply_best_rule(lemma, msd, allprules, allsrules):
         if applicablerules:
             bestrule = max(applicablerules, key = lambda x: (len(x[0]), x[2], len(x[1])))
             base = base.replace(bestrule[0], bestrule[1])
-
+    '''
     if msd in allprules:
         applicablerules = [(x[0],x[1],y) for x,y in allprules[msd].items() if x[0] in base]
         if applicablerules:
             bestrule = max(applicablerules, key = lambda x: (x[2]))
             base = base.replace(bestrule[0], bestrule[1])
+    '''
+    if msd in allprules:
+        prefix = next((p for p in SEPARABLE_PREFIXES if base.startswith("<" + p)), "")
+        if prefix:
+            applicablerules = [(x[0], x[1], y) for x, y in allprules[msd].items() if x[0] == prefix]
+            if applicablerules:
+                bestrule = max(applicablerules, key=lambda x: x[2])  # Choose most frequent rule
+                base = base.replace(bestrule[0], bestrule[1], 1)  # Replace prefix
 
     base = base.replace('<', '')
     base = base.replace('>', '')
@@ -226,7 +247,7 @@ def numtrailingsyms(s, symbol):
 
 def main(argv):
     options, remainder = getopt.gnu_getopt(argv[1:], 'ohp:', ['output','help','path='])
-    TEST, OUTPUT, HELP, path = False,False, False, '../data/'
+    TEST, OUTPUT, HELP, path = False,False, False, 'C:/Users/stacy/Downloads/409final/data/'
     for opt, arg in options:
         if opt in ('-o', '--output'):
             OUTPUT = True
@@ -267,6 +288,7 @@ def main(argv):
                 prefbias += numleadingsyms(aligned[0],'_') + numleadingsyms(aligned[1],'_')
                 suffbias += numtrailingsyms(aligned[0],'_') + numtrailingsyms(aligned[1],'_')
                 #counts leading/trailing underscores to detect whether the language has prefix or suffix bias
+        allprules = {} #EDIT
         for l in lines: # Read in lines and extract transformation rules from pairs
             lemma, msd, form = l.split(u'\t')
             if prefbias > suffbias:
@@ -294,7 +316,7 @@ def main(argv):
                     allsrules[msd][(r[0],r[1])] = 1
 
         # Run eval on dev
-        devlines = [line.strip() for line in open(path + lang + ".dev", "r", encoding='utf8') if line != '\n']
+        devlines = [line.strip() for line in open(path + lang + ".trn", "r", encoding='utf8') if line != '\n']
         if TEST:
             devlines = [line.strip() for line in open(path + lang + ".tst", "r", encoding='utf8') if line != '\n']
         numcorrect = 0
