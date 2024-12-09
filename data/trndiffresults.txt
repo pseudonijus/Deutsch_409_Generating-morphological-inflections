@@ -1,6 +1,6 @@
 If you open this file in a compatible viewer (e.g., cat or less -R), you'll see the colors.
 Red (starting with <) is deu.out
-Green (starting with >) is deu.dev
+Green (starting with >) is deu.trn
 
 2,13c2,13
 < Aa machen	V;IMP;NOM(2,PL)	Aa macht Aa
