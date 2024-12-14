@@ -142,8 +142,7 @@ SEPARABLE_PREFIXES = {"ab", "an", "auf", "aus", "bei", "ein", "mit", "nach", "vo
 
 def prefix_suffix_rules_get(lemma, form):
     """Extract a number of suffix-change and prefix-change rules
-    based on a given example lemma+inflected form."""
-    """Analyze how the prefix and suffix change given a lemma and inflected form in order
+    based on a given example lemma+inflected form. Analyze how the prefix and suffix change given a lemma and inflected form in order
     to predict forms for other words.""" 
     prefix = ''
     root = lemma
@@ -217,13 +216,6 @@ def apply_best_rule(lemma, msd, allprules, allsrules):
         if applicablerules:
             bestrule = max(applicablerules, key = lambda x: (len(x[0]), x[2], len(x[1])))
             base = base.replace(bestrule[0], bestrule[1])
-    '''
-    if msd in allprules:
-        applicablerules = [(x[0],x[1],y) for x,y in allprules[msd].items() if x[0] in base]
-        if applicablerules:
-            bestrule = max(applicablerules, key = lambda x: (x[2]))
-            base = base.replace(bestrule[0], bestrule[1])
-    '''
     
     if msd in allprules:
         prefix = next((p for p in SEPARABLE_PREFIXES if base.startswith("<" + p)), "")
