@@ -66,8 +66,6 @@ def levenshtein(s, t, inscost = 1.0, delcost = 1.0, substcost = 1.0):
     #inscost, delcost, substcost: costs of insertion, deletion, and substitution, respectively (default: 1.0)
     @memolrec
     #memoizer for lrec function (as seen below)
-    #spast, tpast: parts of s and t that are passed
-    #srem, trem: parts of s and t that are remaining
     def lrec(spast, tpast, srem, trem, cost):
         if len(srem) == 0:
             #base case of recursive algorithm: if there are no more remaining characters in s
@@ -110,7 +108,6 @@ def memolrec(func):
     cache = {}
     @wraps(func)
     def wrap(sp, tp, sr, tr, cost):
-        #sp and tp are shorthands for spast and tpast; sr and tr are shorthands for srem and trem
         if (sr,tr) not in cache:
             res = func(sp, tp, sr, tr, cost)
             cache[(sr,tr)] = (res[0][len(sp):], res[1][len(tp):], res[4] - cost)
@@ -140,16 +137,31 @@ def alignprs(lemma, form):
     return alemma[0:lspace], alemma[lspace:len(alemma)-tspace], alemma[len(alemma)-tspace:], aform[0:lspace], aform[lspace:len(alemma)-tspace], aform[len(alemma)-tspace:]
     #returns prefix of alemma, stem of alemma, suffix of alemma, prefix of aform, stem of aform, suffix of aform
 
+SEPARABLE_PREFIXES = {"ab", "an", "auf", "aus", "bei", "ein", "mit", "nach", "vor", "weg", "zu"} #EDIT
+#defines list of separable prefixes
 
 def prefix_suffix_rules_get(lemma, form):
     """Extract a number of suffix-change and prefix-change rules
-    based on a given example lemma+inflected form."""
-    """Analyze how the prefix and suffix change given a lemma and inflected form in order
+    based on a given example lemma+inflected form. Analyze how the prefix and suffix change given a lemma and inflected form in order
     to predict forms for other words.""" 
-    lp,lr,ls,fp,fr,fs = alignprs(lemma, form) #get six parts, three for in three for out
+    prefix = ''
+    root = lemma
+    for p in SEPARABLE_PREFIXES:
+        if lemma.startswith(p):
+            prefix = p
+            root = lemma[len(p):] #removes prefix to isolate root
+            #print(f"Prefix: {prefix}, Root: {root}, Lemma: {lemma}") #EDIT
+            break
+
+    lp,lr,ls,fp,fr,fs = alignprs(root, form) #get six parts, three for in three for out
     #lp, lr, ls: lemma prefix, lemma root, lemma suffix
     #fp, fr, fs: form prefix, form root, form suffix
 
+    #Prefix rules
+    prules = set()
+    if prefix:
+        prules.add((prefix, fp)) #rule for transforming the prefix
+    
     # Suffix rules
     ins  = lr + ls + ">"
     #stem and suffix of lemma, '>' indicates end
@@ -164,7 +176,7 @@ def prefix_suffix_rules_get(lemma, form):
     srules = {(x[0].replace('_',''), x[1].replace('_','')) for x in srules}
     #removes underscores from suffix rules by replacing with empty strings
 
-    # Prefix rules
+    '''# Prefix rules
     prules = set()
     if len(lp) >= 0 or len(fp) >= 0:
         #if either the lemma or form has a prefix
@@ -178,7 +190,8 @@ def prefix_suffix_rules_get(lemma, form):
             #inp and outp, plus the form root sliced from the beginning to index i
             prules = {(x[0].replace('_',''), x[1].replace('_','')) for x in prules}
             #removes underscores from prefix rules by replacing with empty strings
-
+    '''
+    
     return prules, srules
     #returns set of prefix and suffix rules, respectively
 
@@ -198,18 +211,24 @@ def apply_best_rule(lemma, msd, allprules, allsrules):
     if msd not in allprules and msd not in allsrules:
         return lemma #haven't seen this inflection, so bail out
 
-    if msd in allsrules: #applying the best suffix rule
+    if msd in allsrules:
         applicablerules = [(x[0],x[1],y) for x,y in allsrules[msd].items() if x[0] in base]
         if applicablerules:
             bestrule = max(applicablerules, key = lambda x: (len(x[0]), x[2], len(x[1])))
             base = base.replace(bestrule[0], bestrule[1])
-
-    if msd in allprules: #applying the best prefix rule
-        applicablerules = [(x[0],x[1],y) for x,y in allprules[msd].items() if x[0] in base]
-        if applicablerules:
-            bestrule = max(applicablerules, key = lambda x: (x[2]))
-            base = base.replace(bestrule[0], bestrule[1])
-
+    
+    if msd in allprules:
+        prefix = next((p for p in SEPARABLE_PREFIXES if base.startswith("<" + p)), "")
+        if prefix:
+            applicablerules = [(x[0], x[1], y) for x, y in allprules[msd].items() if x[0] == prefix]
+            if applicablerules:
+                bestrule = max(applicablerules, key=lambda x: x[2])  # Choose most frequent rule
+                root = lemma[len(prefix):]  # Remove the original prefix
+                print(f"Original Lemma: {lemma}, Prefix Detected: {prefix}")
+                print(f"Root: {root}") #EDIT
+                lemma = f"{bestrule[1]} {lemma}"  # Add the transformed prefix at the correct position
+                #base = base.replace(bestrule[0], bestrule[1], 1)  # Replace prefix
+    
     base = base.replace('<', '')
     base = base.replace('>', '')
     return base
@@ -229,7 +248,7 @@ def numtrailingsyms(s, symbol):
 
 def main(argv):
     options, remainder = getopt.gnu_getopt(argv[1:], 'ohp:', ['output','help','path='])
-    TEST, OUTPUT, HELP, path = False,False, False, '../data/'
+    TEST, OUTPUT, HELP, path = False,False, False, 'C:/Users/stacy/Downloads/409final/data/'
     for opt, arg in options:
         if opt in ('-o', '--output'):
             OUTPUT = True
@@ -270,7 +289,10 @@ def main(argv):
                 prefbias += numleadingsyms(aligned[0],'_') + numleadingsyms(aligned[1],'_')
                 suffbias += numtrailingsyms(aligned[0],'_') + numtrailingsyms(aligned[1],'_')
                 #counts leading/trailing underscores to detect whether the language has prefix or suffix bias
-        for l in lines: # Read in lines and extract transformation rules from pairs
+        
+        allprules = {} #EDIT: initializes new dictionary to store prefix rules
+        
+        for l in lines: #read in lines and extract transformation rules from pairs
             lemma, msd, form = l.split(u'\t')
             if prefbias > suffbias:
                 lemma = lemma[::-1]
@@ -280,21 +302,22 @@ def main(argv):
             #generates transformation rules
 
             if msd not in allprules and len(prules) > 0:
-                allprules[msd] = {} #no prefix rule needs to be applied
+                allprules[msd] = {}
             if msd not in allsrules and len(srules) > 0:
-                allsrules[msd] = {} #no suffix rule needs to be applied
+                allsrules[msd] = {}
 
             for r in prules:
                 if (r[0],r[1]) in allprules[msd]:
-                    allprules[msd][(r[0],r[1])] = allprules[msd][(r[0],r[1])] + 1
+                    allprules[msd][(r[0],r[1])] += 1
                 else:
                     allprules[msd][(r[0],r[1])] = 1
 
             for r in srules:
                 if (r[0],r[1]) in allsrules[msd]:
-                    allsrules[msd][(r[0],r[1])] = allsrules[msd][(r[0],r[1])] + 1
+                    allsrules[msd][(r[0],r[1])] += 1
                 else:
                     allsrules[msd][(r[0],r[1])] = 1
+        #EDIT print(f"Prefix Rules for MSD {msd}: {allprules.get(msd, {})}")
 
         # Run eval on dev
         devlines = [line.strip() for line in open(path + lang + ".dev", "r", encoding='utf8') if line != '\n']
@@ -306,6 +329,7 @@ def main(argv):
             outfile = open(path + lang + ".out", "w", encoding='utf8')
         for l in devlines:
             lemma, msd, correct = l.split(u'\t')
+#                    lemma, msd, = l.split(u'\t')
             if prefbias > suffbias:
                 lemma = lemma[::-1]
             outform = apply_best_rule(lemma, msd, allprules, allsrules)
