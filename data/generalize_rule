@@ -1,0 +1,21 @@
+def generalize_rule(source, target):  # for suffixes
+  """
+  Generalize a rule to avoid redundancy.
+  Ex: "machen" -> "machst" becomes "*en" -> "*st" instead of "chen" -> "chst".
+  """
+  # Find the longest common suffix
+  def longest_common_suffix(s1, s2):
+      i = 0
+      while i < min(len(s1), len(s2)) and s1[-(i+1)] == s2[-(i+1)]:
+          i += 1
+      return s1[-i:], s2[-i:]  # returns the matching suffix
+
+  # Extract the core suffix for generalization
+  s1_suffix, s2_suffix = longest_common_suffix(source, target)
+  s1_core = source[:-len(s1_suffix)] if s1_suffix else source
+  s2_core = target[:-len(s2_suffix)] if s2_suffix else target
+
+  gen_source = f"*{s1_suffix}" if s1_core else source
+  gen_target = f"*{s2_suffix}" if s2_core else target
+
+  return gen_source, gen_target
