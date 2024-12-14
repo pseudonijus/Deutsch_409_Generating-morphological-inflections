@@ -66,6 +66,8 @@ def levenshtein(s, t, inscost = 1.0, delcost = 1.0, substcost = 1.0):
     #inscost, delcost, substcost: costs of insertion, deletion, and substitution, respectively (default: 1.0)
     @memolrec
     #memoizer for lrec function (as seen below)
+    #spast, tpast: parts of s and t that are passed
+    #srem, trem: parts of s and t that are remaining
     def lrec(spast, tpast, srem, trem, cost):
         if len(srem) == 0:
             #base case of recursive algorithm: if there are no more remaining characters in s
@@ -108,6 +110,7 @@ def memolrec(func):
     cache = {}
     @wraps(func)
     def wrap(sp, tp, sr, tr, cost):
+        #sp and tp are shorthands for spast and tpast; sr and tr are shorthands for srem and trem
         if (sr,tr) not in cache:
             res = func(sp, tp, sr, tr, cost)
             cache[(sr,tr)] = (res[0][len(sp):], res[1][len(tp):], res[4] - cost)
@@ -195,13 +198,13 @@ def apply_best_rule(lemma, msd, allprules, allsrules):
     if msd not in allprules and msd not in allsrules:
         return lemma #haven't seen this inflection, so bail out
 
-    if msd in allsrules:
+    if msd in allsrules: #applying the best suffix rule
         applicablerules = [(x[0],x[1],y) for x,y in allsrules[msd].items() if x[0] in base]
         if applicablerules:
             bestrule = max(applicablerules, key = lambda x: (len(x[0]), x[2], len(x[1])))
             base = base.replace(bestrule[0], bestrule[1])
 
-    if msd in allprules:
+    if msd in allprules: #applying the best prefix rule
         applicablerules = [(x[0],x[1],y) for x,y in allprules[msd].items() if x[0] in base]
         if applicablerules:
             bestrule = max(applicablerules, key = lambda x: (x[2]))
@@ -277,9 +280,9 @@ def main(argv):
             #generates transformation rules
 
             if msd not in allprules and len(prules) > 0:
-                allprules[msd] = {}
+                allprules[msd] = {} #no prefix rule needs to be applied
             if msd not in allsrules and len(srules) > 0:
-                allsrules[msd] = {}
+                allsrules[msd] = {} #no suffix rule needs to be applied
 
             for r in prules:
                 if (r[0],r[1]) in allprules[msd]:
@@ -303,7 +306,6 @@ def main(argv):
             outfile = open(path + lang + ".out", "w", encoding='utf8')
         for l in devlines:
             lemma, msd, correct = l.split(u'\t')
-#                    lemma, msd, = l.split(u'\t')
             if prefbias > suffbias:
                 lemma = lemma[::-1]
             outform = apply_best_rule(lemma, msd, allprules, allsrules)
